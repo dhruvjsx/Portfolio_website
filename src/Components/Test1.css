@@ -1,0 +1,154 @@
+.intro {
+    font-size: var(--step-6);
+    color: var(--text-color);
+  }
+  
+  .introduction {
+    font-size: var(--step-9);
+    color: var(--text-color);
+    font-family: lato;
+  }
+  .firstBlock {
+    height: 100%;
+    width: 100%;
+  }
+  .frontend {
+    color: var(--font-pink);
+    margin-top: 15vh;
+    margin-left: 40vw;
+    font-size: var(--step-6);
+    font-family: lato;
+  }
+  
+  .subtitle {
+    color: var(--text-color);
+    font-family: lato;
+    margin-top: 5vh;
+    margin-left: 30vw;
+    font-size: var(--step-0);
+  }
+  .scroll {
+    height: 100vh;
+    width: 100vw;
+    color: black;
+  }
+  .introduction {
+    height: 100px;
+    font-size: var(--step-9);
+  }
+  
+  .container {
+    height: 100vh;
+    width: 500%;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .panel {
+    width: 20%;
+  
+    height: 100vh;
+  }
+  
+  .box0 {
+    font-size: var(--step-9);
+    background-color: rgb(255, 85, 0);
+    color: var(--font-pink);
+    font-family: lato;
+    width: fit-content;
+  }
+  .box1 {
+    font-size: var(--step-9);
+    width: fit-content;
+    margin-right: 200px;
+    color: var(--font-pink);
+    font-family: lato;
+    background-color: rgb(87, 255, 255);
+  }
+  
+  .box2 {
+    font-size: var(--step-10-);
+    width: fit-content;
+    color: var(--font-pink);
+    font-family: lato;
+    background-color: rgb(64, 122, 63);
+  }
+  .box0,
+  .box1,
+  .box2 {
+    transition: all 0.5s ease-in-out;
+    width: 90%;
+    text-align: right;
+  }
+  
+  .about-text0,
+  .about-text1,
+  .about-text2 {
+    font-size: var(--step-2);
+    width: fit-content;
+    color: var(--font-pink);
+    font-family: lato;
+    background-color: rgb(63, 105, 112);
+  }
+  
+  @media screen and (max-width: 1138px) {
+    .box0,
+    .box1,
+    .box2 {
+      font-size: var(--step-7);
+    }
+  }
+  
+  @media screen and (max-width: 568px) {
+    .box0,
+    .box1,
+    .box2 {
+      font-size: var(--step-5);
+    }
+  }
+  
+  .space {
+    width: 20px;
+  }
+  .space1 {
+    width: 100px;
+  }
+  
+  .introduction {
+    font-size: var(--step-7);
+  }
+  
+  /* @media screen and (max-width: 638px) {
+    .scroll {
+      display: none;
+    }
+  } */
+  .intro {
+    font-size: var(--step-6);
+    color: var(--text-color);
+  }
+  
+  .introduction {
+    font-size: var(--step-9);
+    color: var(--text-color);
+    font-family: lato;
+  }
+  .firstBlock {
+    height: 100%;
+    width: 100%;
+  }
+  .frontend {
+    color: var(--font-pink);
+    margin-top: 15vh;
+    margin-left: 40vw;
+    font-size: var(--step-6);
+    font-family: lato;
+  }
+  
+  .subtitle {
+    color: var(--text-color);
+    font-family: lato;
+    margin-top: 5vh;
+    margin-left: 30vw;
+    font-size: var(--step-0);
+  }
+  

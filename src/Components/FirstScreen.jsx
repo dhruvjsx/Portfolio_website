@@ -38,7 +38,7 @@ const FirstScreen = () => {
         end: "+=100%", // Adjust the end value to overlap with the right element
         scrub: 2,
         // pin: true,
-        // markers:true,
+        markers:true,
         // pinnedContainer: ".firstContainer",
       },
     })
@@ -52,7 +52,7 @@ const FirstScreen = () => {
           start: "top top",
           end: "center top",
           scrub: 2,
-        //   markers: true,
+          markers: true,
           pin: true,
           // pinnedContainer: ".firstContainer",
         },
@@ -69,7 +69,7 @@ const FirstScreen = () => {
             end: "50% top",
             scrub: 2,
             pin: true,
-            // markers:true,
+            markers:true,
             pinnedContainer: ".firstContainer",
           },
         }
@@ -78,7 +78,7 @@ const FirstScreen = () => {
 
 
   return (
-    <section className="firstContainer bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 h-screen relative overflow-hidden">
+    <section className="firstContainer border bg-gradient-to-b from-gray-200 via-gray-300  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
 <Header/>
 <img
         src={quote}
