@@ -59,7 +59,7 @@ const SecondScreen = () => {
         rotation: 0, 
         scale: 1, 
         color: "#000000", 
-        duration: 2, 
+        duration: 5, 
         stagger: 0.1 
       },
       "<" 
@@ -103,7 +103,7 @@ const SecondScreen = () => {
     <div className='flex z-10 overflow-y-hidden justify-center items-center h-screen relative overflow-hidden'>
       <h1 className='text-4xl textanime space-x-20'>JAVASCRIPT</h1>
       <div className=" space">
-        <img className='absolute bottom-[0%] left-[40%]' src={reactLogo} data-speed="-12" alt="React"/>
+        <img className='absolute bottom-[0%] left-[40%]' src={reactLogo} data-speed="-10" alt="React"/>
         <img className='absolute bottom-[0%] left-[48%]' src={reduxLogo} data-speed="4" alt="Redux"/>
         <img className='absolute bottom-[0%] left-[10%]' src={tailwindLogo} data-speed="-3" alt="Tailwind"/>
         <img className='absolute bottom-[0%] left-[90%]' src={nextjsLogo} data-speed="-12" alt="Next.js"/>
