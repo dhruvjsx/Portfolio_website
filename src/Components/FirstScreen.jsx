@@ -78,7 +78,7 @@ const FirstScreen = () => {
 
 
   return (
-    <section className="firstContainer border bg-gradient-to-b from-gray-200 via-gray-300  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
+    <section className="firstContainer  bg-gradient-to-b from-gray-200 via-gray-300  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
 
 <img
         src={quote}

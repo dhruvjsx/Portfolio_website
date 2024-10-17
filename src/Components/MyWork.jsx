@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React, { useEffect } from 'react';
-
+import rateXDashboard from '../assets/RateX/rateXDashboard.png'
 const MyWork = () => {
     useGSAP(() => {
         // Register ScrollTrigger plugin
@@ -51,12 +51,20 @@ const MyWork = () => {
       </div>
       <div className="w-full my-4 mx-auto overflow-hidden">
         {/* Parent container with overflow hidden */}
-        <div className="flex w-[900px] flex-wrap mx-auto opacity-0 workContainer gap-4 relative">
-          <div className="box h-[400px] w-[400px] border  border-black relative"></div>
-          <div className="box h-[400px] w-[400px] border opacity-0  border-black relative"></div>
-          <div className="box h-[400px] w-[400px] border  border-black relative"></div>
-          <div className="box h-[400px] w-[400px] border   border-black relative"></div>
-          <div className="box h-[400px] w-[400px] border  border-black relative"></div>
+        <div className="flex w-[900px] flex-wrap mx-auto opacity-0 workContainer gap-8 relative">
+          {[...Array(5)].map((_, idx) => (
+            <div key={idx} className="box h-[225px] drop-shadow-lg rounded-md overflow-hidden w-[400px] relative group">
+              <img src={rateXDashboard} className="object-fit" alt="Project" />
+              {/* Hover overlay */}
+              <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out text-white">
+                <h2 className="text-xl mb-2">Project Title</h2>
+                <p className="text-sm mb-4">A short description of the project.</p>
+                <button className="px-4 py-2 bg-white text-black rounded-md">
+                  See Full Description
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

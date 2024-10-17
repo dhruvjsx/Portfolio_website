@@ -11,6 +11,7 @@ import TestPage from './Components/SkillSet'
 import Loader from './Components/Loader'
 import Header from './Components/header'
 import MyWork from './Components/MyWork'
+import StackingCards from './Components/StackingCard'
 // import SkillSet from './Components/SkillSet'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -44,15 +45,21 @@ function App() {
       <div className='w-full h-[100vh]'>
       <SecondScreen />
       </div>
-      <div className='w-full h-[100vh]'>
+      <div className='w-full h-[150vh]'>
 
       <MyWork/>
       </div>
+      
       {/* <TestPage/> */}
-      {/* <ThirdScreen/>  */}
-      {/* <FourthScreen /> */}
+      {/* <FourthScreen /> */
+      }
       {/* <div className='h-[100vh] makeitblack'></div> */}
-      <div className='h-[100vh]'></div>
+      <div className='h-[100vh] border'></div>
+      <div className='w-full  h-auto'>
+
+      <StackingCards/>
+      </div>
+      {/* <ThirdScreen/>  */}
     </div>
   )
 }
