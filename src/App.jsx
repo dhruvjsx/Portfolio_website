@@ -41,7 +41,9 @@ function App() {
         <Loader />
         <Header/>
       <FirstScreen />
+      <div className='w-full h-[100vh]'>
       <SecondScreen />
+      </div>
       <div className='w-full h-[100vh]'>
 
       <MyWork/>
