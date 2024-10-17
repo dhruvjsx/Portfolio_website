@@ -13,8 +13,8 @@ const ThirdScreen = () => {
     const projectTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '.projectSection',
-        start: 'top top',
-        end: () => `+=${document.querySelector('.project').offsetHeight * 3}px`,
+        start: 'top 20%',
+        end: () => `+=${document.querySelector('.project').offsetHeight }px`,
         scrub: 1,
         pin: true,
         // markers: true,
@@ -42,14 +42,14 @@ const ThirdScreen = () => {
         '+=0.5'
       )
       .to(
-        '.projectSection',
+        '.projectSection, body',
         { backgroundColor: 'black', duration: 1 },
         '+=0.5' // Ensure the background color change happens last
       );
   }, []);
 
   return (
-    <div className="projectSection bg-white flex overflow-y-hidden h-[100vh] relative overflow-hidden">
+    <div className="projectSection bg-white flex overflow-y-hidden z-10 h-[100vh] relative  overflow-hidden">
       <div className="project border border-black rounded-md w-60 h-60 transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-0 z-10">a</div>
       <div className="project border border-black rounded-md w-60 h-60 transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-12 z-20">b</div>
       <div className="project border border-black rounded-md w-60 h-60 transform absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 z-30">c</div>

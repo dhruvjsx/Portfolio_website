@@ -35,7 +35,7 @@ const [contentVisible, setContentVisible] = useState();
         };
       }, []);
   return (
-    <div  className="w-[100%] absolute h-[7vh] flex justify-center  px-3 py-1 items-center">
+    <div  className="w-[100%] sticky top-0 z-50 h-[7vh] flex justify-center  px-3 py-1 items-center">
   <div className="w-[40%] flex items-center px-4 justify-evenly h-[90%] text-white bg-white rounded-2xl notch">
         {contentVisible && (
           <div className="flex w-full items-center px-4 justify-between h-[90%] text-black bg-white rounded-2xl">

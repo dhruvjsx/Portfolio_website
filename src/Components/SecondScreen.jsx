@@ -59,7 +59,7 @@ const SecondScreen = () => {
         rotation: 0, 
         scale: 1, 
         color: "#000000", 
-        duration: 2, 
+        duration: 5, 
         stagger: 0.1 
       },
       "<" 
@@ -100,7 +100,7 @@ const SecondScreen = () => {
   }, []);
 
   return (
-    <div className='bg-gradient-to-b flex overflow-y-hidden justify-center items-center from-gray-200 via-gray-300 to-gray-400 h-screen relative overflow-hidden'>
+    <div className='flex z-10 overflow-y-hidden justify-center w-full items-center h-full relative overflow-hidden'>
       <h1 className='text-4xl textanime space-x-20'>JAVASCRIPT</h1>
       <div className=" space">
         <img className='absolute bottom-[0%] left-[40%]' src={reactLogo} data-speed="-10" alt="React"/>
