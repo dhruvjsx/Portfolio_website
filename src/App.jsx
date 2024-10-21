@@ -12,11 +12,15 @@ import Loader from './Components/Loader'
 import Header from './Components/header'
 import MyWork from './Components/MyWork'
 import StackingCards from './Components/StackingCard'
+import Gallery from './Components/text/Gallary'
+import Example from './Components/text/Gallary'
 // import SkillSet from './Components/SkillSet'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function App() {
+
+
 //   useEffect(() => {
 //     gsap.to('.makeitblack', {
 //       backgroundColor: 'black',
@@ -39,26 +43,30 @@ function App() {
 
   return (
       <div className=' App h-auto w-full bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 '>
-        <Loader />
+        {/* <Loader /> */}
         <Header/>
       <FirstScreen />
-      <div className='w-full h-[100vh]'>
-      <SecondScreen />
-      </div>
-      <div className='w-full h-[150vh]'>
-
-      <MyWork/>
-      </div>
+  
+      
       
       {/* <TestPage/> */}
       {/* <FourthScreen /> */
       }
       {/* <div className='h-[100vh] makeitblack'></div> */}
-      <div className='h-[100vh] border'></div>
-      <div className='w-full  h-auto'>
+      {/* <div className='w-full  h-auto'>
 
       <StackingCards/>
+      </div> */}
+      <Gallery/>
+      <div className='w-full h-[100vh]'>
+      <SecondScreen />
       </div>
+      <div className='w-full '>
+
+      <MyWork/>
+      </div>
+ 
+      {/* <div className='h-[100vh] border'></div> */}
       {/* <ThirdScreen/>  */}
     </div>
   )

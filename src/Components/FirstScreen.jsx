@@ -133,10 +133,13 @@ const FirstScreen = () => {
 
       {/* Text Content */}
       <div className="absolute left-1/4 bottom-1/4 text-left">
-        <h1 className="text-4xl font-bold">A FRONT END</h1>
-        <h1 className="text-4xl font-bold">DEVELOPER</h1>
-        <h1 className="text-4xl font-bold">WHO LOVES</h1>
-        <h1 className="text-4xl font-bold">DESIGN</h1>
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <text x="25%" y="25%" font-size="48" font-weight="bold" text-anchor="start" fill="black">A FRONT END</text>
+  <text x="25%" y="40%" font-size="48" font-weight="bold" text-anchor="start" fill="black">DEVELOPER</text>
+  <text x="25%" y="55%" font-size="48" font-weight="bold" text-anchor="start" fill="black">WHO LOVES</text>
+  <text x="25%" y="70%" font-size="48" font-weight="bold" text-anchor="start" fill="black">DESIGN</text>
+</svg>
+
       </div>
     </section>
   );

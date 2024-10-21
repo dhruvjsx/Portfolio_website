@@ -9,12 +9,33 @@ function App() {
 
   useEffect(() => {
     const count = setInterval(() => {
-      setCounter((counter) =>
-        counter < 100
-          ? counter + 1
-          : (clearInterval(count), setCounter(100), reveal())
-      );
-    }, 25);
+        setCounter((prevCounter) => {
+          if (prevCounter < 30) {
+            return prevCounter + 1;
+          } else if (prevCounter === 30) {
+            // Pause for 1 second
+            clearInterval(count);
+            setTimeout(() => {
+              const newCount = setInterval(() => {
+                setCounter((counter) => {
+                  if (counter < 100) {
+                    return counter + 1;
+                  } else {
+                    clearInterval(newCount);
+                    setCounter(100);
+                    reveal();
+                    return 100; // Ensure the counter doesn't go above 100
+                  }
+                });
+              }, 25);
+            }, 1000); // 1 second delay
+            return prevCounter; // Return the current counter value while waiting
+          } else {
+            return prevCounter + 1; // Continue incrementing after the pause
+          }
+        });
+      }, 25);
+      
   }, []);
 
   const reveal = () => {
@@ -24,7 +45,7 @@ function App() {
       },
     });
     t1.to(".follow", {
-      width: "100%",
+      height: "100%",
       ease: Expo.easeInOut,
       duration: 1.2,
       delay: 0.7,
@@ -34,34 +55,43 @@ function App() {
     .to(".follow,.Loading", {
         height: "100%",
         ease: Expo.easeInOut,
-        backgroundColor:'transparent',
-        opacity:0,
+        // backgroundColor:'transparent',
+        // opacity:0,
         duration: 0.2,
         delay: 0.5,
       },"<")
-      .to('.appContainer',{
-        opacity:0
-      },"<")
+      .to('.follow',{
+          width: "100%",
+          ease: Expo.easeInOut,
+          // backgroundColor:'transparent',
+          opacity:0,
+          duration: 0.5 ,
+          delay: 0.5,
+        },"<")
+        .to('.appContainer',{
+          opacity:0,
+          duration:1,
+        },'<')
       .to(".first-screen", { opacity: 1},"<")
       .to(".loading,.follow,.appContainer", {
         display: "none",
         duration: 0.3,
-      },"<")
+      },)
   };
 
   return (
     <AppContainer className="appContainer">
       <Loading className="loading">
-        <Follow className="follow">
-          <div className="h-[100vh] bg-transparent"></div>
+        <Follow className=" follow">
+          <div className="h-[100vh] mx-auto bg-transparent"></div>
         </Follow>
         <ProgressBar
           className="hide"
           id="progress-bar"
-          style={{ width: counter + "%" }}
+          style={{ height: counter + "%" }}
         ></ProgressBar>
         <Count id="count" className="hide">
-          {counter}%
+          {/* {counter}% */}
         </Count>
       </Loading>
 
@@ -77,6 +107,7 @@ const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
   color: #000000;
+  background-color: #ffffff;
   position: fixed; /* Changed from absolute to relative */
   top: 0;
   left:0;
@@ -89,7 +120,8 @@ const AppContainer = styled.div`
 const Loading = styled.div`
   height: 100%;
   width: 100%;
-  background-color: #121212;
+  
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -101,20 +133,21 @@ const Loading = styled.div`
 const Follow = styled.div`
   position: absolute;
   background-color: #f48049;
-  height: 2px;
-  width: 0;
-  left: 0;
+  height: 0px;
+  width: 2px;
+//   left: 0;
   z-index: 2;
+
   overflow: hidden;
 `;
 
 const ProgressBar = styled.div`
   position: absolute;
-  left: 0;
-  background-color: #fff;
-  height: 2px;
-  width: 0;
-  transition: 0.4s ease-out;
+//   left: 0;
+  background-color: black;
+  height: 0px;
+  width: 2px;
+  transition: 0.4s ease-in-out;
 `;
 
 const Count = styled.p`

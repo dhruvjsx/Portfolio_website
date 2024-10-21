@@ -14,7 +14,7 @@ const Header = () => {
 
     tl.from(".notch", {
       width: 0,
-      delay:4.3,
+      delay:5.3,
       duration: 1.8,
       ease: "power2.out",
     })
