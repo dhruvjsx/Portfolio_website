@@ -35,7 +35,6 @@ const FourthScreen = () => {
         scrub: 1,
         pin: true,
         pinSpacing: false,
-        // markers: true, // For debugging
       },
     })
       .to(textRoundRef.current, {

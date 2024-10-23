@@ -1,6 +1,6 @@
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { useEffect } from 'react'
+import { useEffect, useRef ,useState} from 'react'
 
 import './App.css'
 import FirstScreen from './Components/FirstScreen'
@@ -11,11 +11,61 @@ import TestPage from './Components/SkillSet'
 import Loader from './Components/Loader'
 import Header from './Components/header'
 import MyWork from './Components/MyWork'
+import StackingCards from './Components/StackingCard'
+import Gallery from './Components/text/Gallary'
+import Example from './Components/text/Gallary'
+import RevealText from './Components/RevealText'
+import KeyboardFascination from './Components/RevealText'
+import GradientText from './Components/RevealText'
 // import SkillSet from './Components/SkillSet'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function App() {
+    // const cursorRef = useRef(null);
+    // const [cursorWidth, setCursorWidth] = useState(0);
+    // const [cursorHeight, setCursorHeight] = useState(0);
+  
+    // const settings = {
+    //   mouseX: 0,
+    //   mouseY: 0,
+    //   xPos: 0,
+    //   yPos: 0,
+    //   speed: 15, // speed factor
+    // };
+  
+    // // Set cursor dimensions once the component is mounted
+    // useEffect(() => {
+    //   const cursor = cursorRef.current;
+    //   setCursorWidth(cursor.offsetWidth);
+    //   setCursorHeight(cursor.offsetHeight);
+  
+    //   const handleMouseMove = (e) => {
+    //     settings.mouseX = e.pageX;
+    //     settings.mouseY = e.pageY;
+    //   };
+  
+    //   document.addEventListener('mousemove', handleMouseMove);
+  
+    //   return () => {
+    //     document.removeEventListener('mousemove', handleMouseMove);
+    //   };
+    // }, []);
+  
+    // // Smooth cursor animation
+    // useEffect(() => {
+    //   const animate = () => {
+    //     settings.xPos += (settings.mouseX - settings.xPos) / settings.speed;
+    //     settings.yPos += (settings.mouseY - settings.yPos) / settings.speed;
+  
+    //     cursorRef.current.style.transform = `translate(${settings.xPos - cursorWidth / 2}px, ${settings.yPos - cursorHeight / 2}px)`;
+  
+    //     requestAnimationFrame(animate);
+    //   };
+  
+    //   animate();
+    // }, [cursorWidth, cursorHeight]);
+
 //   useEffect(() => {
 //     gsap.to('.makeitblack', {
 //       backgroundColor: 'black',
@@ -37,22 +87,37 @@ function App() {
 //   }, [])
 
   return (
-      <div className=' App h-auto w-full bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 '>
+      <div className=' App h-auto w-full bg-[#bcb8ad] '>
         <Loader />
+        {/* <div
+        ref={cursorRef}
+        id="cursor"
+        className="w-16 h-16 z-50 rounded-full bg-orange-500 pointer-events-none absolute mix-blend-darken"
+      ></div> */}
         <Header/>
       <FirstScreen />
+  
+      
+      
+      {/* <TestPage/> */}
+      {/* <FourthScreen /> */
+      }
+      {/* <div className='h-[100vh] makeitblack'></div> */}
+      {/* <div className='w-full  h-auto'>
+
+      <StackingCards/>
+      </div> */}
+      <Gallery/>
       <div className='w-full h-[100vh]'>
       <SecondScreen />
       </div>
-      <div className='w-full h-[100vh]'>
+      {/* <div className='w-full '>
 
       <MyWork/>
-      </div>
-      {/* <TestPage/> */}
+      </div> */}
+ <RevealText/>
+      {/* <div className='h-[100vh] border'></div> */}
       {/* <ThirdScreen/>  */}
-      {/* <FourthScreen /> */}
-      {/* <div className='h-[100vh] makeitblack'></div> */}
-      <div className='h-[100vh]'></div>
     </div>
   )
 }

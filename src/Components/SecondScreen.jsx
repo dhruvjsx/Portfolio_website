@@ -17,7 +17,7 @@ const SecondScreen = () => {
     const imgs = gsap.utils.toArray('img');
 
     let clutter = '';
-
+    gsap.set('.Reacticon', { position: 'absolute', bottom: 0 });
     texts.forEach((text, index) => {
       if (index % 2 === 0) {
         clutter += `<span class="even">${text}</span>`;
@@ -35,30 +35,34 @@ const SecondScreen = () => {
         start: "top 75%",
         end: "top 25%",
         scrub: true,
+       
       }
     });
+    tl.set('.Reacticon', { position: 'absolute', bottom: 0 });
 
     tl.fromTo('.even', 
-      { opacity: 0, y: -50, rotation: 360, scale: 0.5, color: "#ff0000" }, 
+      { opacity: 0, y: -50, rotation: 360, scale: 0.5,   color: "#000000",  duration: 5,  }, 
       { 
         opacity: 1, 
         y: 0, 
         rotation: 0, 
         scale: 1, 
-        color: "#000000", 
-        duration: 2, 
+        color: "#852121",
+        duration: 5, 
         stagger: 0.1 
+        
       }
     );
 
     tl.fromTo('.odd', 
-      { opacity: 0, y: 50, rotation: -360, scale: 0.5, color: "#0000ff" }, 
+      { opacity: 0, y: 50, rotation: -360, scale: 0.5,  color: "#000000",duration: 5}, 
       { 
         opacity: 1, 
         y: 0, 
         rotation: 0, 
         scale: 1, 
-        color: "#000000", 
+        color: "#1a1aa3" ,
+        
         duration: 5, 
         stagger: 0.1 
       },
@@ -86,12 +90,12 @@ const SecondScreen = () => {
         yPercent: speed * 50,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: '.space',
+          trigger: '.javascriptContainer',
           start: 'top bottom',
-          toggleActions: "none none none none",
+          toggleActions: "play reverse play reset",
           end: 'bottom top', // Ensure the animation continues smoothly until the element scrolls out of view
           scrub: 2,
-          markers:false,
+      
         //   onLeave: () => gsap.set(img, { clearProps: 'all' }) // Clear the properties when the animation is done to avoid resetting
         }
       });
@@ -100,15 +104,15 @@ const SecondScreen = () => {
   }, []);
 
   return (
-    <div className='flex z-10 overflow-y-hidden justify-center w-full items-center h-full relative overflow-hidden'>
+    <div className='flex z-10 overflow-y-hidden javascriptContainer justify-center items-center h-screen relative overflow-hidden'>
       <h1 className='text-4xl textanime space-x-20'>JAVASCRIPT</h1>
-      <div className=" space">
-        <img className='absolute bottom-[0%] left-[40%]' src={reactLogo} data-speed="-10" alt="React"/>
-        <img className='absolute bottom-[0%] left-[48%]' src={reduxLogo} data-speed="4" alt="Redux"/>
-        <img className='absolute bottom-[0%] left-[10%]' src={tailwindLogo} data-speed="-3" alt="Tailwind"/>
-        <img className='absolute bottom-[0%] left-[90%]' src={nextjsLogo} data-speed="-12" alt="Next.js"/>
-        <img className='absolute bottom-[0%] left-[30%] w-20' src={nodeLogo} data-speed="-8" alt="Node.js"/>
-        <img className='absolute bottom-[0%] left-[80%]' src={expressLogo} data-speed="-14" alt="Express"/>
+      <div className="  space">
+        <img className='absolute bottom-[0%] left-[40%] Reacticon' src={reactLogo} data-speed="-18" alt="React"/>
+        <img className='absolute bottom-[0%] left-[48%] ' src={reduxLogo} data-speed="-14" alt="Redux"/>
+        <img className='absolute bottom-[0%] left-[10%] ' src={tailwindLogo} data-speed="-10" alt="Tailwind"/>
+        <img className='absolute bottom-[0%] left-[90%] ' src={nextjsLogo} data-speed="-12" alt="Next.js"/>
+        <img className='absolute bottom-[0%] left-[30%] w-20 ' src={nodeLogo} data-speed="-14" alt="Node.js"/>
+        <img className='absolute bottom-[0%] left-[80%] ' src={expressLogo} data-speed="-16" alt="Express"/>
       </div>
     </div>
   );
