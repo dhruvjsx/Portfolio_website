@@ -28,7 +28,7 @@ const MyWork = () => {
     // //     end: "bottom+=500 center", // End the animation after scrolling 500px past the bottom
     // //     scrub: 1, // Smoothly link the progress of the animation to the scroll
     // //     toggleActions: "play reverse play reverse", // Only play when the trigger is hit
-    // //     markers: true // Optional: Adds visual markers for debugging
+    // //    // Optional: Adds visual markers for debugging
     // //   }
     // })
     
@@ -146,7 +146,7 @@ const MyWork = () => {
     }
 
     
-  }, []); // Empty dependency array to run animation only on mount
+  }, []); 
 const projects =[{title:'RateX',projectImg:rateXicon}, {title:'R-World', projectImg:RWorld},{title:'R-Jobs', projectImg:RJobLogo},{title:'Netflix-GPT', projectImg:NetflixLogo},{title:'Netflix-GPT', projectImg:NetflixLogo},{title:'Netflix-GPT', projectImg:NetflixLogo},{title:'Netflix-GPT', projectImg:NetflixLogo}]
   return (
     <div className="w-full h-full">

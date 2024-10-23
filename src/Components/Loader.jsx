@@ -52,7 +52,7 @@ function App() {
     })
     .to(".hide", { opacity: 0, duration: 0.3 })
     .to(".hide", { display: "none", duration: 0.3 })
-    .to(".follow,.Loading", {
+    .to("Loading >Follow", {
         height: "100%",
         ease: Expo.easeInOut,
         // backgroundColor:'transparent',
@@ -60,7 +60,7 @@ function App() {
         duration: 0.2,
         delay: 0.5,
       },"<")
-      .to('.follow',{
+      .to('Follow',{
           width: "100%",
           ease: Expo.easeInOut,
           // backgroundColor:'transparent',
@@ -80,11 +80,12 @@ function App() {
   };
 
   return (
-    <AppContainer className="appContainer">
-      <Loading className="loading">
-        <Follow className=" follow">
+    <div className="appContainer w-screen h-screen text-black bg-white fixed top-0 left-0 flex items-center justify-center z-[999999]">
+     <div className="h-full loading w-full bg-white flex justify-center items-center absolute top-0 z-30">
+
+     <div className="follow absolute bg-[#f48049] h-0 w-[2px] z-20 overflow-hidden">
           <div className="h-[100vh] mx-auto bg-transparent"></div>
-        </Follow>
+        </div>
         <ProgressBar
           className="hide"
           id="progress-bar"
@@ -93,11 +94,11 @@ function App() {
         <Count id="count" className="hide">
           {/* {counter}% */}
         </Count>
-      </Loading>
+      </div>
 
       {/* FirstScreen is positioned below the loader */}
      {/* <FirstScreen1> <FirstScreen className="first-screen" /></FirstScreen1> */}
-    </AppContainer>
+    </div>
   );
 }
 

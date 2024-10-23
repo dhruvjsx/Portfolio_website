@@ -35,7 +35,7 @@ const SecondScreen = () => {
         start: "top 75%",
         end: "top 25%",
         scrub: true,
-        markers:true,
+       
       }
     });
     tl.set('.Reacticon', { position: 'absolute', bottom: 0 });
@@ -47,7 +47,7 @@ const SecondScreen = () => {
         y: 0, 
         rotation: 0, 
         scale: 1, 
-        color: "#ff0000",
+        color: "#852121",
         duration: 5, 
         stagger: 0.1 
         
@@ -61,7 +61,7 @@ const SecondScreen = () => {
         y: 0, 
         rotation: 0, 
         scale: 1, 
-        color: "#0000ff" ,
+        color: "#1a1aa3" ,
         
         duration: 5, 
         stagger: 0.1 
@@ -95,7 +95,7 @@ const SecondScreen = () => {
           toggleActions: "play reverse play reset",
           end: 'bottom top', // Ensure the animation continues smoothly until the element scrolls out of view
           scrub: 2,
-        //   markers:true,
+      
         //   onLeave: () => gsap.set(img, { clearProps: 'all' }) // Clear the properties when the animation is done to avoid resetting
         }
       });

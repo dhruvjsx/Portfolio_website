@@ -24,7 +24,7 @@ const FirstScreen = () => {
 
       scrub: 2,
       pin: true,
-      // markers:true,
+
       // pinnedContainer: ".firstContainer",
     }, } });
 
@@ -38,7 +38,7 @@ const FirstScreen = () => {
         end: "+=100%", // Adjust the end value to overlap with the right element
         scrub: 2,
         // pin: true,
-        // markers:true,
+   
         // pinnedContainer: ".firstContainer",
       },
     })
@@ -52,7 +52,7 @@ const FirstScreen = () => {
           start: "top top",
           end: "center top",
           scrub: 2,
-        //   markers: true,
+
           pin: true,
           // pinnedContainer: ".firstContainer",
         },
@@ -69,7 +69,6 @@ const FirstScreen = () => {
             end: "50% top",
             scrub: 2,
             pin: true,
-            // markers:true,
             pinnedContainer: ".firstContainer",
           },
         }
@@ -78,7 +77,7 @@ const FirstScreen = () => {
 
 
   return (
-    <section className="firstContainer  bg-gradient-to-b from-gray-200 via-gray-300  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
+    <section className="firstContainer  bg-gradient-to-br from-gray-200 via-[#bcb8ad]  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
 
 <img
         src={quote}
@@ -127,18 +126,19 @@ const FirstScreen = () => {
       </p>
 
       {/* Main Image */}
-      <div className="dhruvoid w-full flex items-center justify-center absolute bottom-0">
+      <div className="dhruvoid w-full flex items-center justify-center ml-28 z-10 absolute bottom-0">
         <img src={dhruvoid} width={500} alt="" />
       </div>
 
+      <div className="transform translate-x-0 translate-y-0 text-[#dfdcff] text-[clamp(2rem,6rem,4vw)] leading-[1.2] mx-auto my-[50px] w-[800px] invisible" id="quote">Deadlines are looming. You've got to deliver something that looks amazing, packed with lots of whiz-bang effects that run smoothly on various machines. No time to reinvent the wheel. You need a reliable tool set that helps you live up to your reputation as a coding Rock Star.</div> 
       {/* Text Content */}
-      <div className="absolute left-1/4 bottom-1/4 text-left">
-      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
-  <text x="25%" y="25%" font-size="48" font-weight="bold" text-anchor="start" fill="black">A FRONT END</text>
-  <text x="25%" y="40%" font-size="48" font-weight="bold" text-anchor="start" fill="black">DEVELOPER</text>
-  <text x="25%" y="55%" font-size="48" font-weight="bold" text-anchor="start" fill="black">WHO LOVES</text>
-  <text x="25%" y="70%" font-size="48" font-weight="bold" text-anchor="start" fill="black">DESIGN</text>
-</svg>
+      <div className="absolute left-[20%] bottom-1/4 text-left uppercase text-[5rem] leading-none font-extrabold   break-words hyphens-auto">
+      
+  <h1>A FRONTEND</h1>
+  <h1>Developer</h1>
+  <h1>Who Loves </h1>
+  <h1>Design</h1>
+
 
       </div>
     </section>

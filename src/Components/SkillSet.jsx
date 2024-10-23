@@ -30,7 +30,7 @@ export default function TestPage() {
 //         containerAnimation: scrollTween,
 //         trigger: ".box0",
 //         start: "left center",
-//         markers: false,
+//        
 //         scrub: true,
 //         toggleClass: "active",
 //       },
@@ -61,7 +61,7 @@ export default function TestPage() {
 //         trigger: ".box2",
 //         start: "left center",
 //         toggleActions: "play none none reverse",
-//         markers: false,
+//       
 //         scrub: true,
 //         toggleClass: "active",
 //       },

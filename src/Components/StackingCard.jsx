@@ -35,7 +35,7 @@ const StackingCards = () => {
         end: `bottom top+=${200 + cards.length * spacer}`,
         pin: true,
         pinSpacing: false,
-        // markers: true,
+        
         id: 'pin',
         invalidateOnRefresh: true,
       });

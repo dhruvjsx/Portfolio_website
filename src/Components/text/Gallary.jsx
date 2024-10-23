@@ -47,7 +47,7 @@ const   Example = () => {
           end: "top 30%",
         //   animation: animation,
           scrub: true,
-        //   markers: true,
+       
           onEnter: () => changeGalleryBackground(allPhotos[index]),
         //   onLeave: () => resetGalleryBackground(allPhotos[index-1]),
           onEnterBack: () => changeGalleryBackground(allPhotos[index]),
@@ -70,7 +70,7 @@ const   Example = () => {
           end: "top 50%",
           animation: animation,
           scrub: true,
-        //   markers: true,
+        
           onEnter: () => changeGalleryBackground(photos[index]),
           onLeave: () => resetGalleryBackground(photos[index-1]),
           onEnterBack: () => changeGalleryBackground(photos[index]),

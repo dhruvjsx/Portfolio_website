@@ -17,7 +17,7 @@ const ThirdScreen = () => {
         end: () => `+=${document.querySelector('.project').offsetHeight }px`,
         scrub: 1,
         pin: true,
-        // markers: true,
+       
       },
     });
 
