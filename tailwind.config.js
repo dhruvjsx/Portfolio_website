@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+        SharpGrotesk: ["SharpGrotesk", "sans-serif"],
+      
+      },
   },
   plugins: [],
 }

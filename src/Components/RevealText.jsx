@@ -54,9 +54,8 @@ const RevealText = () => {
         <div class="container">
             
           <p class="reveal font-serif ">
-           Javascript, Reactjs, StoryBook, Redux, RTK, Nextjs, Nodejs,
-            Expressjs, Tailwind CSS, ApexChart,Bootstrap, Hosting, AntD, HTML,
-            CSS, SASS, Git, Github, C/C++, AWS, JQuery, ThreeJS, TypeScript</p>
+           Javascript, Reactjs, StoryBook, Redux, RTK, Nextjs, Nodejs,Expressjs, Tailwind CSS, ApexChart,Bootstrap, Hosting, AntD, HTML, CSS, SASS, Git, Github, C/C++, AWS, JQuery,Typescript,Threejs
+           </p>
         </div>
       </section>
     </div>
