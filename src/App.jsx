@@ -88,7 +88,7 @@ function App() {
 
   return (
       <div className=' App h-auto w-full bg-[#bcb8ad] '>
-        <Loader />
+        {/* <Loader /> */}
         {/* <div
         ref={cursorRef}
         id="cursor"
@@ -111,11 +111,11 @@ function App() {
       <div className='w-full h-[100vh]'>
       <SecondScreen />
       </div>
-      {/* <div className='w-full '>
+ <RevealText/>
+      <div className='w-full '>
 
       <MyWork/>
-      </div> */}
- <RevealText/>
+      </div>
       {/* <div className='h-[100vh] border'></div> */}
       {/* <ThirdScreen/>  */}
     </div>

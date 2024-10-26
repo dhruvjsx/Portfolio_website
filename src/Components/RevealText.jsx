@@ -49,14 +49,13 @@ const RevealText = () => {
   }, []);
 
   return (
-    <div class="revealText items-center ">
+    <div class="revealText items-center " >
       <section className=" h-[100vh]  flex   items-start justify-center">
         <div class="container">
             
           <p class="reveal font-serif ">
-           Javascript, Reactjs, StoryBook, Redux, RTK, Nextjs, Nodejs,
-            Expressjs, Tailwind CSS, ApexChart,Bootstrap, Hosting, AntD, HTML,
-            CSS, SASS, Git, Github, C/C++, AWS, JQuery, ThreeJS, TypeScript</p>
+           Javascript, Reactjs, StoryBook, Redux, RTK, Nextjs, Nodejs,Expressjs, Tailwind CSS, ApexChart,Bootstrap, Hosting, AntD, HTML, CSS, SASS, Git, Github, C/C++, AWS, JQuery,Typescript,Threejs
+           </p>
         </div>
       </section>
     </div>

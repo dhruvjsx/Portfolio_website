@@ -132,7 +132,7 @@ const FirstScreen = () => {
 
       <div className="transform translate-x-0 translate-y-0 text-[#dfdcff] text-[clamp(2rem,6rem,4vw)] leading-[1.2] mx-auto my-[50px] w-[800px] invisible" id="quote">Deadlines are looming. You've got to deliver something that looks amazing, packed with lots of whiz-bang effects that run smoothly on various machines. No time to reinvent the wheel. You need a reliable tool set that helps you live up to your reputation as a coding Rock Star.</div> 
       {/* Text Content */}
-      <div className="absolute left-[20%] bottom-1/4 text-left uppercase text-[5rem] leading-none font-extrabold   break-words hyphens-auto">
+      <div className="absolute   font-SharpGrotesk  left-[20%] bottom-1/4 text-left uppercase text-[4rem] leading-none font-extrabold   break-words hyphens-auto">
       
   <h1>A FRONTEND</h1>
   <h1>Developer</h1>

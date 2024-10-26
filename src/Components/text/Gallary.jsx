@@ -3,9 +3,9 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import rateXicon from '../../assets/RateX/rateXicon.svg';
 import "./example.css";
-import Gallary1 from '../../assets/gallary/gallary1.jpg'
-import Gallary2 from '../../assets/gallary/gallary2.jpg'
-import Gallary3 from '../../assets/gallary/gallary3.jpg'
+import Gallary1 from '../../assets/gallary/Gallary1.png'
+import Gallary2 from '../../assets/gallary/Gallary2.png'
+import Gallary3 from '../../assets/gallary/Gallary3.png'
 import Gallary4 from '../../assets/gallary/gallary4.jpg'
 gsap.registerPlugin(ScrollTrigger);
 
@@ -177,7 +177,7 @@ const   Example = () => {
 
           <div className="desktopPhotos bg-[#FAE1EE]">
             <div data-color='transparent' className="desktopPhoto flex items-center justify-center transparent">
-              <img src={Gallary1} className="object-fill h-full w-full" alt="Project " />
+              <img src={Gallary1} className="object-fill h-full w-full " alt="Project " />
             </div>
             <div data-color='#E0F0FF'  className="desktopPhoto flex items-center justify-center bg-[#E0F0FF]">
               <img src={Gallary2} className="object-fill h-full w-full" alt="Project " />
