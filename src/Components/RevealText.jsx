@@ -49,7 +49,7 @@ const RevealText = () => {
   }, []);
 
   return (
-    <div class="revealText items-center ">
+    <div class="revealText items-center " >
       <section className=" h-[100vh]  flex   items-start justify-center">
         <div class="container">
             

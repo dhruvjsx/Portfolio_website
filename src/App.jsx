@@ -88,7 +88,7 @@ function App() {
 
   return (
       <div className=' App h-auto w-full bg-[#bcb8ad] '>
-        <Loader />
+        {/* <Loader /> */}
         {/* <div
         ref={cursorRef}
         id="cursor"

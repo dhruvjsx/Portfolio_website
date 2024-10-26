@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect } from "react";
 import rateXDashboard from "../assets/RateX/rateXDashboard.png";
-import rateXicon from "../assets/RateX/rateXicon.svg";
+import rateXicon from "../assets/RateX/RatexMockup.png";
+
 import RWorld from "../assets/RWorld/rWorldLightLogo.svg";
 import RJobLogo from "../assets/RJobs/RJobLogo.svg";
 import NetflixLogo from "../assets/Netflix/Netflix_Logo.png";
@@ -20,9 +21,9 @@ projectImage.forEach((image)=>{
           trigger: image,  // Element that triggers the animation
           start: "top 85%", 
           // Start when top of boxes hits a bit past center of the viewport
-          // end: "bottom+=500 center", // End the animation after scrolling 500px past the bottom
-          // scrub: 1, s// Smoothly link the progress of the animation to the scroll
-          toggleActions: "play none none none",
+          end: "bottom 95%", // End the animation after scrolling 500px past the bottom
+          scrub: 1, // Smoothly link the progress of the animation to the scroll
+          toggleActions: "play reverse play reverse",
           markers:true // Only play when the trigger is hit
          // Optional: Adds visual markers for debugging
         }
@@ -30,7 +31,9 @@ projectImage.forEach((image)=>{
   
       t1.from(image,{
           width:0,
-          duration:1
+        //   duration:1,
+        //   ease: "expo.inOut",
+  
       })
 })
 
@@ -174,7 +177,7 @@ projectImage.forEach((image)=>{
     { title: "Netflix-GPT", projectImg: NetflixLogo },
   ];
   return (
-<div className="w-full h-auto bg-no-repeat" style={{ background: 'linear-gradient(to bottom, #bcb8ad 0%, #FFFFFF 100%)' }}>      <div className="w-[70%]  mx-auto">
+<div className="w-full h-auto bg-no-repeat" style={{ background: 'linear-gradient(to bottom , #bcb8ad/10 10%, #FFFFFF 20%)' }}>      <div className="w-[70%]  mx-auto">
         <div className="h-[70vh] py-10 w-full ">
           <div className="flex h-full gap-2 w-full items-end justify-start">
             <div className="w-1/3">
@@ -185,8 +188,11 @@ projectImage.forEach((image)=>{
                 | Stakeholder Management
               </div>
             </div>
-            <div className="w-1/2 h-full">
-            <div className="h-full w-full projectImage border border-black"></div>
+            <div className=" h-full">
+            <div className="h-full w-full  ">
+                <img src={rateXicon} alt="project" className="h-full projectImage w-full "/>
+  
+            </div>
             </div>
           </div>
         </div>
