@@ -9,7 +9,7 @@ import RatexScreenshot2 from "../assets/RateX/Screenshot (32).png";
 import RatexScreenshot3 from "../assets/RateX/Screenshot (33).png";
 gsap.registerPlugin(ScrollTrigger);
 
-const StackingCards = () => {
+const StackingCards = ({project}) => {
   useGSAP(() => {
     const cards = gsap.utils.toArray(".card");
     const spacer = 25;
@@ -43,16 +43,18 @@ const StackingCards = () => {
       });
     });
   }, []);
+  console.log(document.querySelector('.stackingContainer')?.offsetHeight,'offsetHeight');
   useGSAP(() => {
     ScrollTrigger.create({
-      trigger: ".para", // The trigger element
+      trigger: ".para",
       start: "top top",
-      end: "bottom top",
-      pin: ".description", // The element to pin
-      pinSpacing: false,
-      invalidateOnRefresh: true,
+      end: () => `+=${document.querySelector('.cards')?.offsetHeight -200 || 0}`,
+      pin: ".description",
+      pinSpacing: true,
+      markers: true, // Use this for debugging; remove in production
     });
   }, []);
+  
 
   const projectData = [
     {
@@ -199,10 +201,13 @@ const StackingCards = () => {
     },
   ];
 
+
+  const filteredData = projectData.find((item) => item?.title === project);
+
   return (
     <div className="flex flex-col items-center justify-center">
       {/* <h1 className="text-4xl font-light">Description</h1> */}
-      <div className="container flex gap-4   w-full justify-start items-start">
+      <div className="stackingContainer relative flex gap-4   w-full justify-start items-start">
         <div className="cards">
           <div
             className="card bg-white h-[250px] rounded-lg overflow-hidden w-[500px] mb-12 shadow-md"
@@ -257,49 +262,31 @@ const StackingCards = () => {
         </div>
         {/* Sticky description div */}
         <div className="p-4   para h-[1000px] sticky top-0  ">
-          <p className="description">
+          <div className="description">
             <div className="flex flex-col items-center py-12 px-4 bg-gray-100">
               <h1 className="text-4xl font-semibold text-gray-800 mb-6 text-center">
-                Revenue Management Software for Hospitality
+              {filteredData?.Description.descriptionTitle}
               </h1>
               <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl">
-                Ratex is built with{" "}
-                <span className="text-blue-500 font-medium">React</span> and{" "}
-                <span className="text-teal-500 font-medium">Tailwind CSS</span>,
-                offers a sleek, responsive user interface designed to simplify
-                the complex task of revenue management for hospitality
-                businesses.
+              {filteredData?.Description.descriptionSubtitle}
               </p>
 
               <div className="max-w-4xl w-full bg-white rounded-lg shadow-lg p-6 space-y-6">
-                <Feature
-                  title="Dynamic Report Generation"
-                  description="Engineered a report generation feature that converts dynamic JSON data into validated Excel files, ensuring accurate and customizable reporting."
-                />
+              {filteredData?.Description.descriptionPoints.map((desc)=>(
 
-                <Feature
-                  title="Advanced Rate Suggestion Mechanism"
-                  description="Designed a rate suggestion tool with configurable rules, adjusting daily rates based on occupancy and competitive set (compset) data, and offering day-wise Excel downloads for strategic pricing"
-                />
+                  <Feature
+                  title={desc?.title}
+                  description={desc?.description}
+                  />
+                ))}
 
-                <Feature
-                  title="Hotel Intelligence Dashboard"
-                  description="Developed a data-driven intelligence page using ApexCharts, tracking metrics like revenue, room nights, ADR, and cancellations, presenting large volumes of data in an actionable visual format"
-                />
-                <Feature
-                  title="Complex Data Handling"
-                  description="Implemented dynamically nested tables for handling complex JSON structures, demonstrating expertise in managing intricate data models."
-                />
-                <Feature
-                  title="Optimized Application"
-                  description="Enhanced application performance by implementing code splitting, lazy loading, and removing unnecessary dependencies. Optimized component structure by reducing states and eliminating unnecessary re-renders, resulting in a Lighthouse performance score of 97/100."
-                />
+               
               </div>
             </div>
-          </p>
+          </div>
         </div>
       </div>
-      <div className="container2 pt-10 w-full h-[50vh]"></div>
+      <div className="container2 pt-10 w-full  h-[50vh]"></div>
     </div>
   );
 };

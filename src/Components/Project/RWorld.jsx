@@ -5,7 +5,7 @@ import HorizontalScroll from "../HorizontalScroll";
 
 const RWorld = () => {
   return (
-    <div className="flex flex-col items-center justify-center   px-8 md:px-16 w-full bg-[#f8f9fa] relative z-20">
+    <div className="flex flex-col items-center justify-center  min-h-screen px-8 md:px-16 w-full bg-[#f8f9fa] relative z-20">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16 w-full max-w-6xl">
         
         <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
@@ -29,10 +29,9 @@ const RWorld = () => {
       </div>
 
       {/* StackingCards Section */}
-      <div className="mt-16 w-full overflow-hidden">
-        <StackingCards />
+      <div className="mt-16 w-full h-full  bg-[#f8f9fa] oveflow-hidden">
+        <StackingCards project='RWorld' />
       </div>
-      {/* <HorizontalScroll/> */}
      
     </div>
   );

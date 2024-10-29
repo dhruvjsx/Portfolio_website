@@ -23,7 +23,7 @@ const AppRouters = () => {
           
         {
             path: "/project/R-world",
-            element: <><ScrollToTop/>  <RWorld/></>,
+            element: <div className=' bg-[#f8f9fa]'><ScrollToTop/>  <RWorld/></div>,
           },
       {
           path: "*", 
