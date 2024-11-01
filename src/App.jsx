@@ -3,21 +3,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef ,useState} from 'react'
 
 import './App.css'
-import FirstScreen from './Components/FirstScreen'
 import SecondScreen from './Components/SecondScreen'
-import ThirdScreen from './Components/ThirdScreen'
-import FourthScreen from './Components/FourthScreen'
-import TestPage from './Components/SkillSet'
+
 import Loader from './Components/Loader'
 import Header from './Components/header'
 import MyWork from './Components/MyWork'
-import StackingCards from './Components/StackingCard'
 import Gallery from './Components/text/Gallary'
-import Example from './Components/text/Gallary'
 import RevealText from './Components/RevealText'
-import KeyboardFascination from './Components/RevealText'
-import GradientText from './Components/RevealText'
-// import SkillSet from './Components/SkillSet'
+import Intro from './Components/Intro'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -87,6 +80,7 @@ function App() {
 //   }, [])
 
   return (
+
       <div className=' App h-auto w-full bg-[#bcb8ad] '>
         {/* <Loader /> */}
         {/* <div
@@ -95,7 +89,7 @@ function App() {
         className="w-16 h-16 z-50 rounded-full bg-orange-500 pointer-events-none absolute mix-blend-darken"
       ></div> */}
         <Header/>
-      <FirstScreen />
+      <Intro />
   
       
       

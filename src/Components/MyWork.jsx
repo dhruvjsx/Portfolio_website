@@ -8,7 +8,10 @@ import rateXicon from "../assets/RateX/RatexMockup.png";
 import RWorld from "../assets/RWorld/rWorldLightLogo.svg";
 import RJobLogo from "../assets/RJobs/RJobLogo.svg";
 import NetflixLogo from "../assets/Netflix/Netflix_Logo.png";
+import { useNavigate } from "react-router-dom";
 const MyWork = () => {
+
+    // const navigate =useNavigate();
   useGSAP(() => {
     // Register ScrollTrigger plugin
     gsap.registerPlugin(ScrollTrigger);
@@ -30,7 +33,7 @@ projectImage.forEach((image)=>{
       })
   
       t1.from(image,{
-          width:0,
+          width:"5%",
         //   duration:1,
         //   ease: "expo.inOut",
   
@@ -181,8 +184,8 @@ projectImage.forEach((image)=>{
         <div className="h-[70vh] py-10 w-full ">
           <div className="flex h-full gap-2 w-full items-end justify-start">
             <div className="w-1/3">
-              <h1 className="text-[#CD505A] font-semibold">Heading</h1>
-              <p className="text-[#444346] font-SharpGrotesk ">Some description about the project </p>
+              <h1 className="text-[#CD505A] font-semibold">Ratex</h1>
+              <p className="text-[#444346] font-SharpGrotesk ">Revenue Management Software  </p>
               <div className="mt-2 text-[16px] ">
                 0-to-1 Product Design | SaaS Platform | Web Design | App Design
                 | Stakeholder Management

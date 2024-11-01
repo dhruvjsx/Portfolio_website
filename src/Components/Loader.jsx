@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { gsap, CSSPlugin, Expo } from "gsap";
-import FirstScreen from "./FirstScreen";
+import FirstScreen from "./Intro";
 gsap.registerPlugin(CSSPlugin);
 
 function App() {

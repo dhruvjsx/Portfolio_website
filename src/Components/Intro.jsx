@@ -16,7 +16,7 @@ import Header from "./header";
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
-const FirstScreen = () => {
+const Intro = () => {
   useGSAP(() => {
 
     var tl1 = gsap.timeline({ defaults: { scrollTrigger: {
@@ -144,4 +144,4 @@ const FirstScreen = () => {
     </section>
   );
 };
-export default FirstScreen;
+export default Intro;
