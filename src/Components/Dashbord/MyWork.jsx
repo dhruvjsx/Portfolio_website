@@ -10,7 +10,7 @@ import RJobLogo from "../../assets/RJobs/RJobLogo.svg";
 import NetflixLogo from "../../assets/Netflix/Netflix_Logo.png";
 import { useNavigate } from "react-router-dom";
 const MyWork = ({setCurrentSection}) => {
-
+const navigate= useNavigate();
     // const navigate =useNavigate();
   useGSAP(() => {
     // Register ScrollTrigger plugin
@@ -76,7 +76,7 @@ projectImage.forEach((image)=>{
             Stakeholder Management
           </div>
         </div>
-        <div className="w-full md:w-2/3 h-full">
+        <div onClick={()=>navigate('project/ratex')} className="w-full cursor-pointer md:w-2/3 h-full">
           <img
             src={rateXicon}
             alt="project"

@@ -3,15 +3,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef ,useState} from 'react'
 
 import './App.css'
-import SecondScreen from './Components/Dashbord/JavascriptParallex'
+import { BrowserRouter as Router, useLocation } from "react-router-dom";
 
-import Loader from './Components/Loader'
-import Header from './Components/header'
-import MyWork from './Components/Dashbord/MyWork'
-import Gallery from './Components/Dashbord/text/Gallary'
-import RevealText from './Components/Dashbord/Skills'
-import Intro from './Components/Dashbord/Intro'
 import Dashbord from './Pages/Dashbord'
+import AppRouters from './Routes';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -83,7 +78,10 @@ function App() {
   return (
 
       <div className=' App h-auto w-full bg-[#bcb8ad] '>
-       <Dashbord/>
+              {/* <Router> */}
+
+       <AppRouters/>
+              {/* </Router> */}
     </div>
   )
 }

@@ -2,7 +2,11 @@ import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-
+import RatexMockup from '../assets/RateX/RatexMockup.png';
+import RateXDashboard from '../assets/RateX/RateXDashboard.png';
+import RatexScreenshot from '../assets/RateX/Screenshot (31).png'
+import RatexScreenshot2 from '../assets/RateX/Screenshot (32).png'
+import RatexScreenshot3 from '../assets/RateX/Screenshot (33).png'
 gsap.registerPlugin(ScrollTrigger);
 
 const StackingCards = () => {
@@ -47,20 +51,20 @@ const StackingCards = () => {
       <h1 className="text-4xl font-light ">Stacking Cards</h1>
       <div className="container flex ">
         <div className="cards ml-24">
-          <div className="card bg-white h-[200px] w-[400px] mb-12 shadow-md" style={{ top: '40px' }}>
-            1
+          <div className="card bg-white h-[200px] rouded-lg overflow-hidden w-[400px] mb-12 shadow-md" style={{ top: '40px' }}>
+          <img src={RatexMockup} className='w-full h-full object-cover' alt="" />
           </div>
-          <div className="card bg-white h-[200px] w-[400px] mb-12" style={{ top: '45px' }}>
-            2
+          <div className="card bg-white h-[200px] rouded-lg overflow-hidden w-[400px] mb-12" style={{ top: '45px' }}>
+          <img src={RateXDashboard} className='w-full h-full object-cover' alt="" />
           </div>
-          <div className="card bg-white h-[200px] w-[400px] mb-12" style={{ top: '50px' }}>
-            3
+          <div className="card bg-white h-[200px] rouded-lg overflow-hidden w-[400px] mb-12" style={{ top: '50px' }}>
+          <img src={RatexScreenshot} className='w-full h-full object-cover' alt="" />
           </div>
-          <div className="card bg-white h-[200px] w-[400px] mb-12" style={{ top: '55px' }}>
-            4
+          <div className="card bg-white h-[200px] rouded-lg overflow-hidden w-[400px] mb-12" style={{ top: '55px' }}>
+          <img src={RatexScreenshot2} className='w-full h-full object-cover' alt="" />
           </div>
-          <div className="card bg-white h-[200px] w-[400px] mb-12" style={{ top: '60px' }}>
-            5
+          <div className="card bg-white h-[200px] rouded-lg overflow-hidden w-[400px] mb-12" style={{ top: '60px' }}>
+          <img src={RatexScreenshot3} className='w-full h-full object-cover' alt="" />
           </div>
         </div>
       </div>

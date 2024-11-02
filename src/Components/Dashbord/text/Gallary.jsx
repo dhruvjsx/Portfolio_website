@@ -20,7 +20,7 @@ const   Gallery = ({setCurrentSection}) => {
   };
 
   const resetGalleryBackground = (photo) => {
-      const color= getcomputedStyle(photo).backgroundColor;
+      const color=  getcomputedStyle(photo).backgroundColor;
       
     gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
   };
