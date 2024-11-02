@@ -1,17 +1,17 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import dhruvoid from "../assets/dhruvoid.png";
-import keyboard from "../assets/keyboard.png";
-import clip from "../assets/clicp.png";
-import pin from "../assets/pin.png";
-import pins from "../assets/pins.png";
-import reactBadge from "../assets/reactBedge.png";
-import typeScriptBadge from "../assets/TypeScriptBedge.png";
-import fullStackBadge from "../assets/fullStackBade.png";
-import quote from "../assets/quote.png";
+import dhruvoid from "../../assets/dhruvoid.png";
+import keyboard from "../../assets/keyboard.png";
+import clip from "../../assets/clicp.png";
+import pin from "../../assets/pin.png";
+import pins from "../../assets/pins.png";
+import reactBadge from "../../assets/reactBedge.png";
+import typeScriptBadge from "../../assets/TypeScriptBedge.png";
+import fullStackBadge from "../../assets/fullStackBade.png";
+import quote from "../../assets/quote.png";
 import { useGSAP } from "@gsap/react";
-import Header from "./header";
+import Header from "../header";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
@@ -121,18 +121,18 @@ const Intro = () => {
         alt="Full Stack Badge"
         className="absolute bottom-4 rightSide right-8 w-12"
       />
-      <p className="absolute rightSide top-1/2 right-8 rotate-12 text-2xl font-serif">
+      <p className="absolute rightSide top-1/3 md:top-1/2 right-8 rotate-12 text-2xl font-serif">
         140+ wpm
       </p>
 
       {/* Main Image */}
       <div className="dhruvoid w-full flex items-center justify-center ml-28 z-10 absolute bottom-0">
-        <img src={dhruvoid} width={500} alt="" />
+        <img src={dhruvoid}  className="w-[300px] md:w-[500px]" alt="" />
       </div>
 
       <div className="transform translate-x-0 translate-y-0 text-[#dfdcff] text-[clamp(2rem,6rem,4vw)] leading-[1.2] mx-auto my-[50px] w-[800px] invisible" id="quote">Deadlines are looming. You've got to deliver something that looks amazing, packed with lots of whiz-bang effects that run smoothly on various machines. No time to reinvent the wheel. You need a reliable tool set that helps you live up to your reputation as a coding Rock Star.</div> 
       {/* Text Content */}
-      <div className="absolute   font-SharpGrotesk  left-[20%] bottom-1/4 text-left uppercase text-[4rem] leading-none font-extrabold   break-words hyphens-auto">
+      <div className="absolute   font-SharpGrotesk  left-[20%] bottom-1/3 md:bottom-1/4 text-left uppercase text-[3rem] md:text-[4rem] leading-none font-extrabold   break-words hyphens-auto">
       
   <h1>A FRONTEND</h1>
   <h1>Developer</h1>

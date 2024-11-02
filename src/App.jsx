@@ -3,14 +3,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useEffect, useRef ,useState} from 'react'
 
 import './App.css'
-import SecondScreen from './Components/SecondScreen'
+import SecondScreen from './Components/Dashbord/JavascriptParallex'
 
 import Loader from './Components/Loader'
 import Header from './Components/header'
-import MyWork from './Components/MyWork'
-import Gallery from './Components/text/Gallary'
-import RevealText from './Components/RevealText'
-import Intro from './Components/Intro'
+import MyWork from './Components/Dashbord/MyWork'
+import Gallery from './Components/Dashbord/text/Gallary'
+import RevealText from './Components/Dashbord/Skills'
+import Intro from './Components/Dashbord/Intro'
+import Dashbord from './Pages/Dashbord'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -82,36 +83,7 @@ function App() {
   return (
 
       <div className=' App h-auto w-full bg-[#bcb8ad] '>
-        {/* <Loader /> */}
-        {/* <div
-        ref={cursorRef}
-        id="cursor"
-        className="w-16 h-16 z-50 rounded-full bg-orange-500 pointer-events-none absolute mix-blend-darken"
-      ></div> */}
-        <Header/>
-      <Intro />
-  
-      
-      
-      {/* <TestPage/> */}
-      {/* <FourthScreen /> */
-      }
-      {/* <div className='h-[100vh] makeitblack'></div> */}
-      {/* <div className='w-full  h-auto'>
-
-      <StackingCards/>
-      </div> */}
-      <Gallery/>
-      <div className='w-full h-[100vh]'>
-      <SecondScreen />
-      </div>
- <RevealText/>
-      <div className='w-full '>
-
-      <MyWork/>
-      </div>
-      {/* <div className='h-[100vh] border'></div> */}
-      {/* <ThirdScreen/>  */}
+       <Dashbord/>
     </div>
   )
 }

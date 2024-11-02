@@ -1,17 +1,29 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import rateXicon from '../../assets/RateX/rateXicon.svg';
 import "./example.css";
-import Gallary1 from '../../assets/gallary/Gallary1.png'
-import Gallary2 from '../../assets/gallary/Gallary2.png'
-import Gallary3 from '../../assets/gallary/Gallary3.png'
-import Gallary4 from '../../assets/gallary/gallary4.jpg'
+import Gallary1 from '../../../assets/gallary/Gallary1.png'
+import Gallary2 from '../../../assets/gallary/Gallary2.png'
+import Gallary3 from '../../../assets/gallary/Gallary3.png'
+import Gallary4 from '../../../assets/gallary/gallary4.jpg'
 gsap.registerPlugin(ScrollTrigger);
 
-const   Example = () => {
+const   Gallery = ({setCurrentSection}) => {
   const comp = useRef(null);
   const galleryRef = useRef(null);
+
+  const changeGalleryBackground = (photo) => {
+      
+    const color = getComputedStyle(photo).backgroundColor;
+    console.log(color,'color')
+    gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
+  };
+
+  const resetGalleryBackground = (photo) => {
+      const color= getcomputedStyle(photo).backgroundColor;
+      
+    gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
+  };
 
   useLayoutEffect(() => {
     const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
@@ -32,6 +44,12 @@ const   Example = () => {
         end: "bottom bottom",
         pin: ".right",
         scrub: true,
+        onEnter:()=>{
+            setCurrentSection('Gallary')
+        },
+        onEnterBack:()=>{
+            setCurrentSection('Gallary')
+          }
       });
       firstChild.forEach((detail, index) => {
         let headline = detail.querySelector("h1");
@@ -97,19 +115,6 @@ const   Example = () => {
       };
     });
 
-    const changeGalleryBackground = (photo) => {
-      
-      const color = getComputedStyle(photo).backgroundColor;
-      console.log(color,'color')
-      gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
-    };
-
-    const resetGalleryBackground = (photo) => {
-        const color= getcomputedStyle(photo).backgroundColor;
-        
-      gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
-    };
-
     return () => {
       mm.revert();
     };
@@ -150,25 +155,32 @@ const   Example = () => {
 
         <div className="right">
           <div className="mobileContent">
-            <div className="mobilePhoto red"></div>
-            <h1>Red</h1>
-            <p>
-              Red is a color often associated with strong emotions...
-            </p>
+            <div className="mobilePhoto red">
+              <img src={Gallary1} className="object-fill h-full w-full " alt="Project " />
+            </div>
+            <h1>Speed Typer</h1>
+            <p className="text-sm"> 
+              Speed typist at 110 words per minute, always ready to code and communicate at lightning pace.
+              </p>
 
-            <div className="mobilePhoto green"></div>
-            <h1>Green</h1>
+            <div className="mobilePhoto green">
+            <img src={Gallary2} className="object-fill h-full w-full" alt="Project " />
+            </div>
+            <h1>Full Stack Development:</h1>
             <p>
-              Green is a color that is often associated with nature...
-            </p>
+              Full stack developer experienced in MERN stack, delivering end-to-end web solutions
+              </p>
 
-            <div className="mobilePhoto pink"></div>
-            <h1>Pink</h1>
+            <div className="mobilePhoto pink">
+            <img src={Gallary3} className="object-fill h-full w-full" alt="Project " />
+            </div>
+            <h1>Problem Solving</h1>
             <p>
-              Pink is a color that is often associated with femininity...
-            </p>
-
-            <div className="mobilePhoto blue"></div>
+              Strong foundation in algorithms and data structures, optimizing solutions for performance
+              </p>
+            <div className="mobilePhoto blue">
+            <img src={Gallary4} className="object-fill h-full w-full" alt="Project " />
+            </div>
             <h1>Blue</h1>
             <p>
               Blue is a color that is often associated with calmness...
@@ -193,10 +205,10 @@ const   Example = () => {
         </div>
       </div>
 
-      <div className="endSpacer bg-[#D3D6F0] spacer"></div>
+      <div className="endSpacer md:bg-[#D3D6F0] spacer"></div>
       {/* <div className=" spacer"></div> */}
     </div>
   );
 }
 
-export default Example;
+export default Gallery;
