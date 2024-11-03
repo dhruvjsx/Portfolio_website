@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import reactLogo from '../assets/react.png';
-import reduxLogo from '../assets/redux.png';
-import tailwindLogo from '../assets/tailwind.png';
-import nextjsLogo from '../assets/nextjs.png';
-import expressLogo from '../assets/express.png';
-import nodeLogo from '../assets/node.png';
+import reactLogo from '../../assets/react.png';
+import reduxLogo from '../../assets/redux.png';
+import tailwindLogo from '../../assets/tailwind.png';
+import nextjsLogo from '../../assets/nextjs.png';
+import expressLogo from '../../assets/express.png';
+import nodeLogo from '../../assets/node.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const SecondScreen = () => {
+const JavascriptParallex = ({setCurrentSection}) => {
   useEffect(() => {
     const textElement = document.querySelector('.textanime');
     const texts = textElement.textContent.split('');
@@ -35,7 +35,12 @@ const SecondScreen = () => {
         start: "top 75%",
         end: "top 25%",
         scrub: true,
-       
+        onEnter:()=>{
+            setCurrentSection('javascript')
+        },
+                onEnterBack:()=>{
+            setCurrentSection('javascript')
+          }
       }
     });
     tl.set('.Reacticon', { position: 'absolute', bottom: 0 });
@@ -95,7 +100,7 @@ const SecondScreen = () => {
           toggleActions: "play reverse play reset",
           end: 'bottom top', // Ensure the animation continues smoothly until the element scrolls out of view
           scrub: 2,
-      
+        
         //   onLeave: () => gsap.set(img, { clearProps: 'all' }) // Clear the properties when the animation is done to avoid resetting
         }
       });
@@ -105,9 +110,9 @@ const SecondScreen = () => {
 
   return (
     <div className='flex z-10 overflow-y-hidden javascriptContainer justify-center items-center h-screen relative overflow-hidden'>
-      <h1 className='text-4xl textanime space-x-20'>JAVASCRIPT</h1>
+      <h1 className='text-lg md:text-4xl textanime space-x-5 md:space-x-20'>JAVASCRIPT</h1>
       <div className="  space">
-        <img className='absolute bottom-[0%] left-[40%] Reacticon' src={reactLogo} data-speed="-18" alt="React"/>
+        <img className='absolute bottom-[0%]  left-[40%] Reacticon' src={reactLogo} data-speed="-18" alt="React"/>
         <img className='absolute bottom-[0%] left-[48%] ' src={reduxLogo} data-speed="-14" alt="Redux"/>
         <img className='absolute bottom-[0%] left-[10%] ' src={tailwindLogo} data-speed="-10" alt="Tailwind"/>
         <img className='absolute bottom-[0%] left-[90%] ' src={nextjsLogo} data-speed="-12" alt="Next.js"/>
@@ -118,4 +123,4 @@ const SecondScreen = () => {
   );
 }
 
-export default SecondScreen;
+export default JavascriptParallex;
