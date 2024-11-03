@@ -7,7 +7,6 @@ const Ratex = () => {
     <div className="flex flex-col items-center justify-center   px-8 md:px-16 w-full bg-[#f8f9fa] relative z-20">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16 w-full max-w-6xl">
         
-        {/* Text Content */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
           <h1 className="text-[#CD505A] font-semibold text-2xl md:text-3xl mb-2">Ratex</h1>
           <p className="text-[#444346] font-SharpGrotesk text-lg md:text-xl">
@@ -19,8 +18,7 @@ const Ratex = () => {
           </div>
         </div>
 
-        {/* Image Content */}
-        <div className="w-full md:w-1/2 h-[300px] md:h-[400px] mt-8 md:mt-0">
+        <div className="w-full md:w-1/2 h-[300px] md:h-[400px] mt-8 ">
           <img
             src={RatexMockup}
             alt="Ratex Mockup"
@@ -33,7 +31,7 @@ const Ratex = () => {
       <div className="mt-16 w-full overflow-hidden">
         <StackingCards />
       </div>
-      <div className='h-[70vh] w-full'></div>
+      <div className='h-[70vh] bg-red-800 w-full'></div>
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Header from "../Components/header";
 import Intro from "../Components/Dashbord/Intro";
-import RevealText from "../Components/Dashbord/Skills";
 import MyWork from "../Components/Dashbord/MyWork";
 import Gallery from "../Components/Dashbord/text/Gallary";
 import JavascriptParallex from "../Components/Dashbord/JavascriptParallex";
