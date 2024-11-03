@@ -31,7 +31,7 @@ const Ratex = () => {
       <div className="mt-16 w-full overflow-hidden">
         <StackingCards />
       </div>
-      <div className='h-[70vh] bg-red-800 w-full'></div>
+      <div className='h-[270vh] bg-red-800 w-full'></div>
     </div>
   );
 };

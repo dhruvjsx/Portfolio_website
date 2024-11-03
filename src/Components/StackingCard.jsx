@@ -84,23 +84,31 @@ const StackingCards = () => {
         Revenue Management Software for Hospitality
       </h1>
       <p className="text-lg text-gray-600 mb-8 text-center max-w-3xl">
-        Our platform, built with <span className="text-blue-500 font-medium">React</span> and <span className="text-teal-500 font-medium">Tailwind CSS</span>, offers a sleek, responsive user interface designed to simplify the complex task of revenue management for hospitality businesses.
+        Ratex is built with <span className="text-blue-500 font-medium">React</span> and <span className="text-teal-500 font-medium">Tailwind CSS</span>, offers a sleek, responsive user interface designed to simplify the complex task of revenue management for hospitality businesses.
       </p>
 
       <div className="max-w-4xl w-full bg-white rounded-lg shadow-lg p-6 space-y-6">
         <Feature
-          title="Dynamic Pricing with Real-time Updates"
-          description="Automatically adjust room rates based on demand, competitor pricing, and seasonal trends, maximizing occupancy and profitability."
+          title="Dynamic Report Generation"
+          description="Engineered a report generation feature that converts dynamic JSON data into validated Excel files, ensuring accurate and customizable reporting."
         />
 
         <Feature
-          title="Interactive Data Visualization"
-          description="Utilizing ApexCharts and Redux, the software provides insightful visualizations for revenue trends, occupancy rates, and booking sources, empowering management with the data they need for informed decision-making."
+          title="Advanced Rate Suggestion Mechanism"
+          description="Designed a rate suggestion tool with configurable rules, adjusting daily rates based on occupancy and competitive set (compset) data, and offering day-wise Excel downloads for strategic pricing"
         />
 
         <Feature
-          title="Customizable, Responsive UI"
-          description="The platform delivers a responsive, intuitive user experience. Hospitality teams can quickly access all the key metrics and control panels they need for efficient revenue adjustments."
+          title="Hotel Intelligence Dashboard"
+          description="Developed a data-driven intelligence page using ApexCharts, tracking metrics like revenue, room nights, ADR, and cancellations, presenting large volumes of data in an actionable visual format"
+        />
+          <Feature
+          title="Complex Data Handling"
+          description="Implemented dynamically nested tables for handling complex JSON structures, demonstrating expertise in managing intricate data models."
+        />
+          <Feature
+          title="Optimized Application"
+          description="Enhanced application performance by implementing code splitting, lazy loading, and removing unnecessary dependencies. Optimized component structure by reducing states and eliminating unnecessary re-renders, resulting in a Lighthouse performance score of 97/100."
         />
       </div>
     </div>
