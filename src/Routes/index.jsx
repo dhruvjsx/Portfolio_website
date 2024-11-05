@@ -5,17 +5,18 @@ import Dashbord from '../Pages/Dashbord';
 import NotFound from '../Components/NotFound';
 import StackingCards from '../Components/StackingCard';
 import Ratex from '../Components/Project/Ratex';
+import ScrollToTop from '../Components/ScrollToTop';
 
 const AppRouters = () => {
 
     const router = createBrowserRouter([
         {
           path: "/",
-          element: <Dashbord/>,
+          element: <><ScrollToTop/> <Dashbord/></>,
         },
         {
             path: "/project/ratex",
-            element: <Ratex/>,
+            element: <><ScrollToTop/> <Ratex/></>,
           },
       {
           path: "*", 

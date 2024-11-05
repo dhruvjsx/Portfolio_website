@@ -7,6 +7,8 @@ import { BrowserRouter as Router, useLocation } from "react-router-dom";
 
 import Dashbord from './Pages/Dashbord'
 import AppRouters from './Routes';
+import ScrollToTop from './Components/ScrollToTop';
+import Loader from './Components/Loader';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -79,7 +81,7 @@ function App() {
 
       <div className=' App h-auto w-full bg-[#bcb8ad] '>
               {/* <Router> */}
-
+            <Loader/>
        <AppRouters/>
               {/* </Router> */}
     </div>

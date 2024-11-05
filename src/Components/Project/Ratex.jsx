@@ -1,6 +1,7 @@
 import React from "react";
 import RatexMockup from "../../assets/RateX/RatexMockup.png";
 import StackingCards from "../StackingCard";
+import HorizontalScroll from "../HorizontalScroll";
 
 const Ratex = () => {
   return (
@@ -31,7 +32,8 @@ const Ratex = () => {
       <div className="mt-16 w-full overflow-hidden">
         <StackingCards />
       </div>
-      <div className='h-[270vh] bg-red-800 w-full'></div>
+      {/* <HorizontalScroll/> */}
+     
     </div>
   );
 };

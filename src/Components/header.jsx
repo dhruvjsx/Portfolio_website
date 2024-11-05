@@ -13,6 +13,7 @@ const Header = ({ currentSection }) => {
     // Initial animation for content visibility when component mounts
     tl.from(".notch", {
       width: 0,
+      delay:5.2,
       duration: 1.8,
       ease: "power2.out",
     })
