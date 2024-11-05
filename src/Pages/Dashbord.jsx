@@ -5,6 +5,7 @@ import MyWork from "../Components/Dashbord/MyWork";
 import Gallery from "../Components/Dashbord/text/Gallary";
 import JavascriptParallex from "../Components/Dashbord/JavascriptParallex";
 import Skills from "../Components/Dashbord/Skills";
+import DeepSeaCreatures from "../Components/HorizontalScroll";
 const Dashbord = () => {
     const [currentSection,setCurrentSection]=useState()
     console.log(currentSection,"currentSection")
@@ -20,6 +21,7 @@ const Dashbord = () => {
       <div className="w-full ">
         <MyWork setCurrentSection={setCurrentSection}  />
       </div>
+      <DeepSeaCreatures/>
     </div>
   );
 };

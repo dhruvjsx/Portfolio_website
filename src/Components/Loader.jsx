@@ -4,7 +4,7 @@ import { gsap, CSSPlugin, Expo } from "gsap";
 import FirstScreen from "./Dashbord/Intro";
 gsap.registerPlugin(CSSPlugin);
 
-function App() {
+const Loader=()=> {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
@@ -52,7 +52,7 @@ function App() {
     })
     .to(".hide", { opacity: 0, duration: 0.3 })
     .to(".hide", { display: "none", duration: 0.3 })
-    .to("Loading >Follow", {
+    .to(".loading , .follow", {
         height: "100%",
         ease: Expo.easeInOut,
         // backgroundColor:'transparent',
@@ -60,7 +60,7 @@ function App() {
         duration: 0.2,
         delay: 0.5,
       },"<")
-      .to('Follow',{
+      .to('.follow',{
           width: "100%",
           ease: Expo.easeInOut,
           // backgroundColor:'transparent',
@@ -102,7 +102,7 @@ function App() {
   );
 }
 
-export default App;
+export default Loader;
 
 const AppContainer = styled.div`
   width: 100vw;
