@@ -6,6 +6,8 @@ import NotFound from '../Components/NotFound';
 import StackingCards from '../Components/StackingCard';
 import Ratex from '../Components/Project/Ratex';
 import ScrollToTop from '../Components/ScrollToTop';
+import RWorld from '../Components/Project/RWorld';
+import Header from '../Components/header';
 
 const AppRouters = () => {
 
@@ -17,6 +19,11 @@ const AppRouters = () => {
         {
             path: "/project/ratex",
             element: <><ScrollToTop/> <Ratex/></>,
+          },
+          
+        {
+            path: "/project/R-world",
+            element: <><ScrollToTop/>  <RWorld/></>,
           },
       {
           path: "*", 
