@@ -76,7 +76,7 @@ projectImage.forEach((image)=>{
             Stakeholder Management
           </div>
         </div>
-        <div onClick={()=>navigate('project/ratex')} className="w-full cursor-pointer md:w-2/3 h-full">
+        <div onClick={()=>navigate('project/ratex')} className=" cursor-pointer w-full md:w-1/2 h-full">
           <img
             src={rateXicon}
             alt="project"
@@ -89,16 +89,16 @@ projectImage.forEach((image)=>{
     {/* Project Section 2 */}
     <div className="h-[70vh] py-10 w-full">
       <div className="flex flex-col md:flex-row h-full gap-4 w-full items-end justify-start">
-        <div className="w-full md:w-1/2 h-full">
+        <div onClick={()=>navigate('project/R-world')}  className="cursor-pointer w-full md:w-1/2 h-full">
           <div className="h-full projectImage w-full border border-black"></div>
         </div>
         <div className="w-full md:w-1/3">
-          <h1 className="text-[#CD505A] font-semibold">Heading</h1>
+          <h1 className="text-[#CD505A] font-semibold">RWorld</h1>
           <p className="text-[#444346] font-SharpGrotesk">
-            Some description about the project
+            Task Management / Employee management 
           </p>
           <div className="mt-2 text-sm md:text-[16px]">
-            0-to-1 Product Design | SaaS Platform | Web Design | App Design |
+            React | Redux | Web Design | App Design |
             Stakeholder Management
           </div>
         </div>
@@ -109,16 +109,16 @@ projectImage.forEach((image)=>{
     <div className="h-[70vh] py-10 w-full">
       <div className="flex flex-col-reverse md:flex-row h-full gap-2 w-full items-end justify-start">
         <div className="w-full md:w-1/3">
-          <h1 className="text-[#CD505A] font-semibold">Heading</h1>
+          <h1 className="text-[#CD505A] font-semibold">R-jobs</h1>
           <p className="text-[#444346] font-SharpGrotesk">
-            Some description about the project
+            Job Portal for Hospitality
           </p>
           <div className="mt-2 text-sm md:text-[16px]">
             0-to-1 Product Design | SaaS Platform | Web Design | App Design |
             Stakeholder Management
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-full">
+        <div  onClick={()=>navigate('project/R-job')}  className=" cursor-pointer w-full md:w-1/2 h-full">
           <div className="h-full projectImage w-full border border-black"></div>
         </div>
       </div>
@@ -127,13 +127,13 @@ projectImage.forEach((image)=>{
     {/* Project Section 4 */}
     <div className="h-[70vh] py-10 w-full">
       <div className="flex flex-col md:flex-row h-full gap-4 w-full items-end justify-start">
-        <div className="w-full md:w-1/2 h-full">
+        <div  onClick={()=>navigate('project/adming-panel')}  className="w-full cursor-pointer md:w-1/2 h-full">
           <div className="h-full projectImage w-full border border-black"></div>
         </div>
         <div className="w-full md:w-1/3">
-          <h1 className="text-[#CD505A] font-semibold">Heading</h1>
+          <h1 className="text-[#CD505A] font-semibold">Admin Panel</h1>
           <p className="text-[#444346] font-SharpGrotesk">
-            Some description about the project
+            Manage confidentail information
           </p>
           <div className="mt-2 text-sm md:text-[16px]">
             0-to-1 Product Design | SaaS Platform | Web Design | App Design |
