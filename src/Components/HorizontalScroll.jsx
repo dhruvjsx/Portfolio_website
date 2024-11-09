@@ -35,7 +35,7 @@ const HorizontalScroll = () => {
         end: () => `+=${horizontalScroll.offsetWidth +100}`,
         toggleActions: "play reverse play reverse",
         //   scrub: true,
-        markers:true
+       
       },
     });
     gsap.to(".horizontalText", {
@@ -46,7 +46,7 @@ const HorizontalScroll = () => {
           end: () => `+=${horizontalScroll.offsetWidth +100}`,
           toggleActions: "play reverse play reverse",
           //   scrub: true,
-          markers:true
+    
         },
       });
 
@@ -59,7 +59,6 @@ const HorizontalScroll = () => {
           end: () => `+=${horizontalScroll.offsetWidth +100}`,
           toggleActions: "play reverse play reverse",
           //   scrub: true,
-          markers:true
         },
       });
   }, []);

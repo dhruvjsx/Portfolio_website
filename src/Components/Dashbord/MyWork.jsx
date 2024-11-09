@@ -127,7 +127,7 @@ projectImage.forEach((image)=>{
     {/* Project Section 4 */}
     <div className="h-[70vh] py-10 w-full">
       <div className="flex flex-col md:flex-row h-full gap-4 w-full items-end justify-start">
-        <div  onClick={()=>navigate('project/adming-panel')}  className="w-full cursor-pointer md:w-1/2 h-full">
+        <div  onClick={()=>navigate('project/admin-panel')}  className="w-full cursor-pointer md:w-1/2 h-full">
           <div className="h-full projectImage w-full border border-black"></div>
         </div>
         <div className="w-full md:w-1/3">

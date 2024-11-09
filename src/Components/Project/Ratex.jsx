@@ -30,7 +30,7 @@ const Ratex = () => {
 
       {/* StackingCards Section */}
       <div className="mt-16 w-full overflow-hidden">
-        <StackingCards />
+        <StackingCards project='RateX' />
       </div>
       {/* <HorizontalScroll/> */}
      
