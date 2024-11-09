@@ -8,6 +8,7 @@ import Ratex from '../Components/Project/Ratex';
 import ScrollToTop from '../Components/ScrollToTop';
 import RWorld from '../Components/Project/RWorld';
 import Header from '../Components/header';
+import UniversalProject from '../Components/Project/UniversalProject';
 
 const AppRouters = () => {
 
@@ -18,12 +19,20 @@ const AppRouters = () => {
         },
         {
             path: "/project/ratex",
-            element: <><ScrollToTop/> <Ratex/></>,
+            element: <><ScrollToTop/><UniversalProject project='RateX'/></>,
           },
           
-        {
+          {
             path: "/project/R-world",
-            element: <div className=' bg-[#f8f9fa]'><ScrollToTop/>  <RWorld/></div>,
+            element: <div className=' '><ScrollToTop/>  <UniversalProject project='RWorld'/></div>,
+          },
+          {
+            path: "/project/R-Job",
+            element: <div className=' '><ScrollToTop/>  <UniversalProject project='RJob'/></div>,
+          },
+          {
+            path: "/project/Admin-panel",
+            element: <div className=' '><ScrollToTop/>  <UniversalProject project='Admin Panel'/></div>,
           },
       {
           path: "*", 

@@ -55,7 +55,6 @@ const Skills = ({setCurrentSection}) => {
               end: () => `+=${window.innerHeight * 2}px`,
               scrub: true,
               pin: true,
-              markers: true,
             },
           });
         }
