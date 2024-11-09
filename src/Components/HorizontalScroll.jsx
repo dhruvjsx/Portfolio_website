@@ -60,6 +60,23 @@ const HorizontalScroll = () => {
           toggleActions: "play reverse play reverse",
           //   scrub: true,
         },
+        
+      });
+
+      gsap.from(".review", {
+        opacity:0,
+        y:100,
+ stagger:0.7,
+ duration:1,
+        scrollTrigger: {
+            trigger: ".review",
+            containerAnimation: scrollTween,
+            markers:true,
+            start: "left left",
+            toggleActions: "play none none none",
+            id: "1",
+          }
+        
       });
   }, []);
 console.log(scrollerRef?.current?.offsetWidth, window?.innerWidth,"scroller ref")
@@ -67,15 +84,15 @@ console.log(scrollerRef?.current?.offsetWidth, window?.innerWidth,"scroller ref"
     <div className="outer overflow-hidden ">
       <div
         ref={containerRef}
-        className="scroll  flex flex-col w-[170vw] h-[100vh] overflow-x-hidden"
+        className="scroll  flex flex-col w-[220vw] h-[100vh] overflow-x-hidden"
       >
         <div className="horizontalText w-[500px] text-black text-6xl font-bold leading-snug mx-4">
           <div>How</div>
           <div>can I</div>
           <div>help you ?</div>
         </div>
-        <section ref={scrollerRef} className="horizontalSection mt-10 flex  justify-start p-10 w-full">
-          <div className="grid grid-cols-6 gap-4 text-black ">
+        <section ref={scrollerRef} className="horizontalSection mt-10 flex  justify-start p-10 ">
+          <div className="grid  grid-cols-6 gap-4 text-black ">
             <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[200px] w-[400px] flex  items-center text-center">
               Responsive UI Design
             </div>
@@ -114,6 +131,12 @@ console.log(scrollerRef?.current?.offsetWidth, window?.innerWidth,"scroller ref"
             </div>
            
           </div>
+
+<div className=" review flex items-center justify-center h-full ">
+
+          <div className="review mx-20 border h-1/2 w-[500px]">hello</div>
+          <div className="review mx-20 border h-1/2 w-[500px]">hello</div>
+</div>
         </section>
       </div>
     </div>

@@ -105,6 +105,19 @@ const Header = ({ currentSection }) => {
     };
   }, [currentSection]);
 
+  const scrollToSection = (e, id) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    const element = document.getElementById(id);
+    if (element) {
+      // Scroll to the element's top position minus the offset
+      const offsetPosition = element.offsetTop + 100;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
     <div className="fixed top-0 left-0 w-full z-50 h-[7vh] flex justify-center items-center px-3 py-1 pointer-events-none">
       <div className="w-[60%] md:w-[40%] flex items-center px-4 justify-evenly h-[90%] text-white bg-white rounded-2xl notch pointer-events-auto">
@@ -115,11 +128,11 @@ const Header = ({ currentSection }) => {
         <div className="contentVisible flex w-full items-center px-4 justify-between h-[90%] text-black bg-white rounded-2xl">
           <div className="overflow-hidden opi">
             <img src="" alt="" />
-            <h1 className="text-sm">DHRUVJS</h1>
+            <div className="text-sm"><a href="#">Dhruvjs</a></div>
           </div>
           <div className="flex gap-2 md:gap-4 text-xs md:text-base items-center justify-center">
-            <div className="headerContent">Skill</div>
-            <div className="headerContent">Work</div>
+            <div  className="headerContent"><a href="#skills" onClick={(e) => scrollToSection(e, "skills")}>Skill</a></div>
+            <div className="headerContent"><a href="#work" onClick={(e) => scrollToSection(e, "work")}>Work</a></div>
             <div className="headerContent">Achievement</div>
             <div className="headerContent">Contact</div>
           </div>
