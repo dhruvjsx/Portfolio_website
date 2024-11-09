@@ -17,8 +17,11 @@ const Dashbord = () => {
       <div className="w-full h-[100vh]">
         <JavascriptParallex setCurrentSection={setCurrentSection} />
       </div>
+      <div >
+
       <Skills setCurrentSection={setCurrentSection}  />
-      <div className="w-full ">
+      </div>
+      <div id='work' className="w-full ">
         <MyWork setCurrentSection={setCurrentSection}  />
       </div>
       <DeepSeaCreatures/>

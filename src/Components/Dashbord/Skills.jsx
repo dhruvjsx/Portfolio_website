@@ -65,10 +65,10 @@ const Skills = ({setCurrentSection}) => {
   }, []);
 
   return (
-    <div className="revealText items-center">
-      <section className="h-[100vh] flex items-start justify-center">
+    <div id='skills' className="revealText items-center">
+      <section   className="h-[100vh] flex items-start justify-center">
         <div className="container">
-          <p className="reveal text-sm md:text-xl font-serif">
+          <p  className="reveal text-sm md:text-xl font-serif">
             Javascript, Reactjs, StoryBook, Redux, RTK, Nextjs, Nodejs,
             Expressjs, Tailwind CSS, ApexChart, Bootstrap, Hosting, AntD, HTML,
             CSS, SASS, Git, Github, C/C++, AWS, JQuery, Typescript, Threejs
