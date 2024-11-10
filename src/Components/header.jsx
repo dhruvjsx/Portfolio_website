@@ -131,10 +131,10 @@ const Header = ({ currentSection }) => {
             <div className="text-sm"><a href="#">Dhruvjs</a></div>
           </div>
           <div className="flex gap-2 md:gap-4 text-xs md:text-base items-center justify-center">
-            <div  className="headerContent"><a href="#skills" onClick={(e) => scrollToSection(e, "skills")}>Skill</a></div>
-            <div className="headerContent"><a href="#work" onClick={(e) => scrollToSection(e, "work")}>Work</a></div>
+            <div  className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "skills")}>Skill</div></div>
+            <div className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "work")}>Work</div></div>
             <div className="headerContent">Achievement</div>
-            <div className="headerContent">Contact</div>
+            <div className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "contact")}>Contact</div></div>
           </div>
         </div>
       </div>
