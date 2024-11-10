@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
-import RatexMockup from "../assets/RateX/RatexMockup.png";
-import RateXDashboard from "../assets/RateX/RateXDashboard.png";
-import RatexScreenshot from "../assets/RateX/Screenshot (31).png";
-import RatexScreenshot2 from "../assets/RateX/Screenshot (32).png";
-import RatexScreenshot3 from "../assets/RateX/Screenshot (33).png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const StackingCards = ({filteredData}) => {

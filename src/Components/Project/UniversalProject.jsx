@@ -6,6 +6,11 @@ import RateXDashboard from "../../assets/RateX/rateXDashboard.png";
 import RatexScreenshot from "../../assets/RateX/Screenshot (31).png";
 import RatexScreenshot2 from "../../assets/RateX/Screenshot (32).png";
 import RatexScreenshot3 from "../../assets/RateX/Screenshot (33).png";
+import RJobMainDashboard from '../../assets/RJobs/mainDashboard.jpg'
+import RJobPreview from '../../assets/RJobs/jobPreview.jpg'
+import RJobDashboard from '../../assets/RJobs/jobsDashboard.jpg'
+
+
 const UniversalProject = ({ project }) => {
   const projectData = [
     {
@@ -99,9 +104,9 @@ const UniversalProject = ({ project }) => {
       tags: "0-to-1 Product Design | SaaS Platform | Web Design | App Design | Stakeholder Management",
       Images: {
         mockup: RatexMockup,
-        Image1: RatexMockup,
-        Image2: RateXDashboard,
-        Image3: RatexScreenshot,
+        Image1: RJobMainDashboard,
+        Image2: RJobPreview,
+        Image3: RJobDashboard,
         Image4: RatexScreenshot2,
         Image5: RatexScreenshot3,
       },

@@ -3,7 +3,6 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-import WheelSlider from "./Dashbord/WheelSlider";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -17,13 +16,11 @@ const HorizontalScroll = () => {
   const [currentCard, setCurrentCard] = useState(null);
   const containerRef = useRef(null);
   const scrollerRef = useRef(null);
-  const arrowRef =useRef(null);
-  const [text,setText]=useState('Scroll Down')
-
-
+  const arrowRef = useRef(null);
+  const [text, setText] = useState("Scroll Down");
 
   useGSAP(() => {
-    const arrowDirection =arrowRef.current;
+    const arrowDirection = arrowRef.current;
     const scroller = containerRef.current;
     const horizontalScroll = scrollerRef.current;
     const sections = gsap.utils.toArray(".horizontalSection");
@@ -88,7 +85,7 @@ const HorizontalScroll = () => {
         trigger: ".review",
         containerAnimation: scrollTween,
         start: "-40% left",
-        end:"right right",
+        end: "right right",
         toggleActions: "play none none reverse",
         id: "1",
       },
@@ -119,38 +116,35 @@ const HorizontalScroll = () => {
     gsap.to(".arrow", { y: 5, ease: "power1.inOut", repeat: -1, yoyo: true });
 
     gsap.to(wheel, {
-        rotation: -360,
-        ease: "none",
-        duration: images.length,
-        scrollTrigger: {
-          trigger: scroller,
-          start: "top top",
-          end: () => `+=${horizontalScroll.offsetWidth}`,
-          scrub: 1,
-          onUpdate: (self) => {
-            if (self.direction === -1) {
-              // Scrolling up
-              setText("Scroll Up");
-              gsap.to(arrowDirection, {
-                rotation: 180,
-                duration: 0.2,
-                ease: "power2.inOut",
-              });
-            } else if (self.direction === 1) {
-              // Scrolling down
-              setText("Scroll Down");
-              gsap.to(arrowDirection, {
-                rotation: 0,
-                duration: 0.2,
-                ease: "power2.inOut",
-              });
-            }
-          },
+      rotation: -360,
+      ease: "none",
+      duration: images.length,
+      scrollTrigger: {
+        trigger: scroller,
+        start: "top top",
+        end: () => `+=${horizontalScroll.offsetWidth}`,
+        scrub: 1,
+        onUpdate: (self) => {
+          if (self.direction === -1) {
+            // Scrolling up
+            setText("Scroll Up");
+            gsap.to(arrowDirection, {
+              rotation: 180,
+              duration: 0.2,
+              ease: "power2.inOut",
+            });
+          } else if (self.direction === 1) {
+            // Scrolling down
+            setText("Scroll Down");
+            gsap.to(arrowDirection, {
+              rotation: 0,
+              duration: 0.2,
+              ease: "power2.inOut",
+            });
+          }
         },
-      });
-      
-      
-   
+      },
+    });
   }, []);
 
   return (
@@ -215,7 +209,10 @@ const HorizontalScroll = () => {
         <div className="scroll-down absolute flex flex-col justify-center bottom-5  w-[100vw]   text-white font-medium uppercase text-sm">
           <div className="flex arrow text-black flex-col items-center justify-center">
             <h1> {text}</h1>
-            <div ref={arrowRef} className=" arrowDown mt-2 w-4 h-4 bg-center bg-contain">
+            <div
+              ref={arrowRef}
+              className=" arrowDown mt-2 w-4 h-4 bg-center bg-contain"
+            >
               <MdOutlineKeyboardArrowDown />
             </div>
           </div>
@@ -242,10 +239,19 @@ const HorizontalScroll = () => {
                 <FaLinkedin color="white" size={25} />
               </a>,
               <a
-                href="mailto:letsconnectdhruv@gmail.com?subject=We%20Have%20An%20Opportunity%20For%20You&body=We,%20I%20would%20like%20to%20discuss%20your%20project.x"
+                href="mailto:letsconnectdhruv@gmail.com?subject=We%20Have%20An%20Opportunity%20For%20You"
                 className="email-link"
                 key="email"
                 target="_blank"
+                onClick={()=>{
+                    navigator.clipboard.writeText('letsconnectdhruv@gmail.com')
+                    .then(() => {
+                      alert("Mail copied to clipboard!");
+                    })
+                    .catch((err) => {
+                      console.error("Failed to copy text: ", err);
+                    });
+                }}
               >
                 <MdOutlineMarkEmailUnread color="white" size={25} />
               </a>,
@@ -257,10 +263,7 @@ const HorizontalScroll = () => {
                 <SiLeetcode color="white" size={25} />
               </a>,
             ].map((num) => (
-              <div
-                className="wheel__card absolute top-0 left-0 w-[6%] max-w-[100px] aspect-square cursor-pointer"
-              
-              >
+              <div className="wheel__card absolute top-0 left-0 w-[6%] max-w-[100px] aspect-square cursor-pointer">
                 {num}
               </div>
             ))}
