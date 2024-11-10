@@ -17,12 +17,16 @@ const HorizontalScroll = () => {
   const [currentCard, setCurrentCard] = useState(null);
   const containerRef = useRef(null);
   const scrollerRef = useRef(null);
+  const arrowRef =useRef(null);
+  const [text,setText]=useState('Scroll Down')
+
+
 
   useGSAP(() => {
+    const arrowDirection =arrowRef.current;
     const scroller = containerRef.current;
     const horizontalScroll = scrollerRef.current;
     const sections = gsap.utils.toArray(".horizontalSection");
-
     const scrollTween = gsap.to(sections, {
       xPercent: -60,
       ease: "none",
@@ -115,16 +119,38 @@ const HorizontalScroll = () => {
     gsap.to(".arrow", { y: 5, ease: "power1.inOut", repeat: -1, yoyo: true });
 
     gsap.to(wheel, {
-      rotation: -360,
-      ease: "none",
-      duration: images.length,
-      scrollTrigger: {
-        trigger: scroller,
-        start: "top top",
-        end: () => `+=${horizontalScroll.offsetWidth}`,
-        scrub: 1,
-      },
-    });
+        rotation: -360,
+        ease: "none",
+        duration: images.length,
+        scrollTrigger: {
+          trigger: scroller,
+          start: "top top",
+          end: () => `+=${horizontalScroll.offsetWidth}`,
+          scrub: 1,
+          onUpdate: (self) => {
+            if (self.direction === -1) {
+              // Scrolling up
+              setText("Scroll Up");
+              gsap.to(arrowDirection, {
+                rotation: 180,
+                duration: 0.2,
+                ease: "power2.inOut",
+              });
+            } else if (self.direction === 1) {
+              // Scrolling down
+              setText("Scroll Down");
+              gsap.to(arrowDirection, {
+                rotation: 0,
+                duration: 0.2,
+                ease: "power2.inOut",
+              });
+            }
+          },
+        },
+      });
+      
+      
+   
   }, []);
 
   return (
@@ -188,8 +214,8 @@ const HorizontalScroll = () => {
         </section>
         <div className="scroll-down absolute flex flex-col justify-center bottom-5  w-[100vw]   text-white font-medium uppercase text-sm">
           <div className="flex arrow text-black flex-col items-center justify-center">
-            <h1> Scroll down</h1>
-            <div className="  mt-2 w-4 h-4 bg-center bg-contain">
+            <h1> {text}</h1>
+            <div ref={arrowRef} className=" arrowDown mt-2 w-4 h-4 bg-center bg-contain">
               <MdOutlineKeyboardArrowDown />
             </div>
           </div>
@@ -233,7 +259,7 @@ const HorizontalScroll = () => {
             ].map((num) => (
               <div
                 className="wheel__card absolute top-0 left-0 w-[6%] max-w-[100px] aspect-square cursor-pointer"
-                key={num}
+              
               >
                 {num}
               </div>
