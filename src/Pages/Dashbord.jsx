@@ -6,7 +6,6 @@ import Gallery from "../Components/Dashbord/text/Gallary";
 import JavascriptParallex from "../Components/Dashbord/JavascriptParallex";
 import Skills from "../Components/Dashbord/Skills";
 import DeepSeaCreatures from "../Components/HorizontalScroll";
-import WheelSlider from "../Components/Dashbord/WheelSlider";
 const Dashbord = () => {
     const [currentSection,setCurrentSection]=useState()
     console.log(currentSection,"currentSection")
