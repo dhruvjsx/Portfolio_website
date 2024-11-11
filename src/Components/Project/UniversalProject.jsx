@@ -1,7 +1,6 @@
 import React from "react";
 import RatexMockup from "../../assets/RateX/RatexMockup.png";
 import StackingCards from "../StackingCard";
-import HorizontalScroll from "../HorizontalScroll";
 import RateXDashboard from "../../assets/RateX/rateXDashboard.png";
 import RatexScreenshot from "../../assets/RateX/Screenshot (31).png";
 import RatexScreenshot2 from "../../assets/RateX/Screenshot (32).png";

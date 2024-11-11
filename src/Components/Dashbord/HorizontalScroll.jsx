@@ -3,11 +3,16 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/all";
 import { useGSAP } from "@gsap/react";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import {
+  MdOutlineFileDownload,
+  MdOutlineKeyboardArrowDown,
+} from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
+import { Tooltip } from "react-tooltip";
+
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 const HorizontalScroll = () => {
@@ -146,7 +151,12 @@ const HorizontalScroll = () => {
       },
     });
   }, []);
-
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/resumeV2-2.pdf'; // Replace with the actual path
+    link.download = 'Dhruv_Parmar_Resume.pdf'; // The file name for download
+    link.click();
+  };
   return (
     <div id="contact" className="outer overflow-hidden ">
       <div
@@ -213,7 +223,7 @@ const HorizontalScroll = () => {
               ref={arrowRef}
               className=" arrowDown mt-2 w-4 h-4 bg-center bg-contain"
             >
-              <MdOutlineKeyboardArrowDown />
+              <MdOutlineKeyboardArrowDown  />
             </div>
           </div>
         </div>
@@ -243,8 +253,9 @@ const HorizontalScroll = () => {
                 className="email-link"
                 key="email"
                 target="_blank"
-                onClick={()=>{
-                    navigator.clipboard.writeText('letsconnectdhruv@gmail.com')
+                onClick={() => {
+                  navigator.clipboard
+                    .writeText("letsconnectdhruv@gmail.com")
                     .then(() => {
                       alert("Mail copied to clipboard!");
                     })
@@ -262,6 +273,24 @@ const HorizontalScroll = () => {
               >
                 <SiLeetcode color="white" size={25} />
               </a>,
+      <div>
+      <div  data-tooltip-id={'download'}
+                        data-tooltip-content={'Download Resume'} onClick={handleDownload} style={{ cursor: 'pointer' }}>
+        <MdOutlineFileDownload color="white" size={25} />
+      </div>
+      <Tooltip
+                        id={'download'}
+                        style={{
+                          borderRadius: "10px",
+                          maxWidth: "350px",
+                          fontSize: "12px",
+                          whiteSpace: "normal",
+                          wordWrap: "break-word",
+                          overflow: "hidden",
+                          zIndex: 20,
+                        }}
+                      />
+    </div>,
             ].map((num) => (
               <div className="wheel__card absolute top-0 left-0 w-[6%] max-w-[100px] aspect-square cursor-pointer">
                 {num}

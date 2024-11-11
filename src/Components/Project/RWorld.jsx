@@ -1,7 +1,6 @@
 import React from "react";
 import RatexMockup from "../../assets/RateX/RatexMockup.png";
 import StackingCards from "../StackingCard";
-import HorizontalScroll from "../HorizontalScroll";
 
 const RWorld = () => {
   return (
