@@ -12,7 +12,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
 import { Tooltip } from "react-tooltip";
-
+import SaumitraSirRecommendation from '../../assets/Reviews/SaumitraSirRecommendation.png'
+import AmanSirRecommendation from '../../assets/Reviews/AmanSirRecommendation.png'
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 const HorizontalScroll = () => {
@@ -85,7 +86,7 @@ const HorizontalScroll = () => {
       opacity: 0,
       y: 100,
       stagger: 0.5,
-      duration: 0.5,
+      duration: 1,
       scrollTrigger: {
         trigger: ".review",
         containerAnimation: scrollTween,
@@ -172,49 +173,54 @@ const HorizontalScroll = () => {
           ref={scrollerRef}
           className="horizontalSection mt-5 flex  justify-start px-10 "
         >
-          <div className="grid  grid-cols-6 gap-4 text-black ">
-            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[200px] w-[400px] flex  items-center text-center">
+          <div className="grid  w-full grid-cols-3 md:grid-cols-6 gap-4 text-black ">
+            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex  items-center text-center">
               Responsive UI Design
             </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center  h-[200px] w-[400px] flex items-center  text-center">
+            <div className="bg-white shadow-lg rounded-md p-4 justify-center h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               Backend
             </div>
-            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[200px] w-[400px] flex  items-center text-center">
+            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex  items-center text-center">
               Deployment
             </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center   h-[200px] w-[400px] flex items-center  text-center">
+            <div className="bg-white shadow-lg rounded-md p-4 justify-center   h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               Data Visualization
             </div>
-            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center   h-[200px] w-[400px] flex items-center  text-center">
+            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               Frontend
             </div>
-            <div className="bg-white shadow-lg rounded-md p-4  justify-center h-[200px] w-[400px] flex items-center  text-center">
+            <div className="bg-white shadow-lg rounded-md p-4  justify-center h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               Optimization
             </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center  h-[200px] w-[400px] flex items-center  text-center">
+            <div className="bg-white shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               Scalability
             </div>
-            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[200px] w-[400px] flex  items-center text-center">
+            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex  items-center text-center">
               Innovation
             </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center  h-[200px] w-[400px] flex items-center  text-center">
+            <div className="bg-white shadow-lg rounded-md p-4 justify-center h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               Team collaboration
             </div>
-            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[200px] w-[400px] flex items-center  text-center">
+            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               System Design
             </div>
-            <div className=" bg-white shadow-lg rounded-md p-4 justify-center  h-[200px] w-[400px] flex items-center  text-center">
+            <div className=" bg-white shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               Customized Solutions
             </div>
-            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[200px] w-[400px] flex items-center  text-center">
+            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
               3D Animation
             </div>
           </div>
 
-          <div className=" review flex items-center justify-center h-full ">
-            <div className="review mx-20 border h-1/2 w-[500px]">hello</div>
-            <div className="review mx-20 border h-1/2 w-[500px]">hello</div>
-          </div>
+          <div className="review-container flex items-center justify-center h-full space-x-4">
+  <div className="review border  rounded-lg overflow-hidden">
+    <img src={AmanSirRecommendation} alt="Recommendation" className="h-full w-full object-cover" />
+  </div>
+  <div className="review border  rounded-lg overflow-hidden">
+    <img src={SaumitraSirRecommendation} alt="Recommendation" className="h-full w-full object-cover" />
+  </div>
+</div>
+
         </section>
         <div className="scroll-down absolute flex flex-col justify-center bottom-5  w-[100vw]   text-white font-medium uppercase text-sm">
           <div className="flex arrow text-black flex-col items-center justify-center">
@@ -228,9 +234,9 @@ const HorizontalScroll = () => {
           </div>
         </div>
 
-        <section className="slider-section     absolute  bottom-0 w-[100vw] overflow-y-hidden h-[15vh]">
+        <section className="slider-section     absolute  bottom-0 w-[100vw] overflow-y-hidden  h-[15vh]">
           <div
-            className="wheel absolute  z-50 color-white  top-5 flex items-end justify-center w-[50vw] h-[40vw] max-w-[400px] max-h-[400px] left-1/2 transform -translate-x-1/2"
+            className="wheel absolute  z-50 color-white  top-5 flex items-end justify-center w-[50vw] h-[50vw] max-w-[400px] max-h-[400px]  left-1/2 transform -translate-x-1/2"
             ref={wheelRef}
           >
             {[
