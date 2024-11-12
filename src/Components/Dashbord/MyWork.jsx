@@ -1,8 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import React, { useEffect } from "react";
-import rateXDashboard from "../../assets/RateX/rateXDashboard.png";
+import React from "react";
 import rateXicon from "../../assets/RateX/RatexMockup.png";
 
 import RWorld from "../../assets/RWorld/rWorldLightLogo.svg";

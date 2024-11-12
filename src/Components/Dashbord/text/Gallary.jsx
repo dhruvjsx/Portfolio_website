@@ -14,15 +14,15 @@ const   Gallery = ({setCurrentSection}) => {
 
   const changeGalleryBackground = (photo) => {
       
-    const color = getComputedStyle(photo).backgroundColor;
-    console.log(color,'color')
-    gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
+    const color = (photo && window.getComputedStyle(photo)?.backgroundColor) ;
+    console.log(photo,'color')
+    color && gsap.to(galleryRef.current, { backgroundColor: color});
   };
 
   const resetGalleryBackground = (photo) => {
-      const color=  getcomputedStyle(photo).backgroundColor;
+    //   const color= (photo && getComputedStyle(photo)?.backgroundColor)  ;
       
-    gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
+    // color && gsap.to(galleryRef.current, { backgroundColor: color });
   };
 
   useLayoutEffect(() => {
@@ -67,9 +67,9 @@ const   Gallery = ({setCurrentSection}) => {
           scrub: true,
        
           onEnter: () => changeGalleryBackground(allPhotos[index]),
-        //   onLeave: () => resetGalleryBackground(allPhotos[index-1]),
+          onLeave: () => resetGalleryBackground(allPhotos[index-1]),
           onEnterBack: () => changeGalleryBackground(allPhotos[index]),
-        //   onLeaveBack:() => resetGalleryBackground(allPhotos[index-1]),
+          onLeaveBack:() => resetGalleryBackground(allPhotos[index-1]),
         });
       });
 

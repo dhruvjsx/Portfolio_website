@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useState } from "react";
 import Header from "../Components/header";
 import Intro from "../Components/Dashbord/Intro";
 import MyWork from "../Components/Dashbord/MyWork";
@@ -8,8 +8,8 @@ import Skills from "../Components/Dashbord/Skills";
 import HorizontalScroll from "../Components/Dashbord/HorizontalScroll";
 const Dashbord = () => {
     const [currentSection,setCurrentSection]=useState()
-    console.log(currentSection,"currentSection")
-  return (
+  
+        return (
     <div className=" ">
       <Header currentSection={currentSection} />
       <Intro />

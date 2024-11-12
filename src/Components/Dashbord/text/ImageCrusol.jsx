@@ -1,13 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, {  useRef } from "react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(Draggable);
 
 const ImageCarousel = () => {
   const cardsContainerRef = useRef(null);
 
-  useEffect(() => {
+  useGSAP(() => {
     // Dynamically load the InertiaPlugin from the GSAP CDN
     const loadInertiaPlugin = async () => {
       const { InertiaPlugin } = await import("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/InertiaPlugin.min.js");
