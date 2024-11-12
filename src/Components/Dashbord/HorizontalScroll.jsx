@@ -212,13 +212,13 @@ const HorizontalScroll = () => {
             </div>
           </div>
 
-          <div className="review-container flex items-center justify-center h-full space-x-4">
-  <div className="review border  rounded-lg overflow-hidden">
-    <img src={AmanSirRecommendation} alt="Recommendation" className="h-full w-full object-cover" />
+          <div className="review-container flex items-center justify-center h-full space-x-4 ">
+  <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
+    <img src={AmanSirRecommendation} alt="Recommendation" className="object-fit" />
   </div>
-  <div className="review border  rounded-lg overflow-hidden">
-    <img src={SaumitraSirRecommendation} alt="Recommendation" className="h-full w-full object-cover" />
-  </div>
+  <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
+    <img src={SaumitraSirRecommendation} alt="Recommendation" className="h-full w-full object-fit" />
+  </div>    
 </div>
 
         </section>
