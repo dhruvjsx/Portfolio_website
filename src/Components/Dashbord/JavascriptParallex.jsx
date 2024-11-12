@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import reactLogo from '../../assets/react.png';
@@ -7,11 +7,12 @@ import tailwindLogo from '../../assets/tailwind.png';
 import nextjsLogo from '../../assets/nextjs.png';
 import expressLogo from '../../assets/express.png';
 import nodeLogo from '../../assets/node.png';
+import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const JavascriptParallex = ({setCurrentSection}) => {
-  useEffect(() => {
+  useGSAP(() => {
     const textElement = document.querySelector('.textanime');
     const texts = textElement.textContent.split('');
     const imgs = gsap.utils.toArray('img');

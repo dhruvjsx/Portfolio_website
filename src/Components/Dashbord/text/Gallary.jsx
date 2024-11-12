@@ -14,13 +14,13 @@ const   Gallery = ({setCurrentSection}) => {
 
   const changeGalleryBackground = (photo) => {
       
-    const color = getComputedStyle(photo).backgroundColor;
-    console.log(color,'color')
+    const color = (photo && window.getComputedStyle(photo)?.backgroundColor) || 'transparent';
+    console.log(photo,'color')
     gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
   };
 
   const resetGalleryBackground = (photo) => {
-      const color=  getcomputedStyle(photo).backgroundColor;
+      const color= (photo && getComputedStyle(photo)?.backgroundColor)  || 'transparent';;
       
     gsap.to(galleryRef.current, { backgroundColor: color || 'transparent'});
   };
