@@ -34,7 +34,7 @@ const Loader = () => {
         },
         "<"
       )
-      .to(".appContainer", { opacity: 0, duration: 1 }, "<");
+      .to(".appContainer", { opacity: 0,  display: "none", duration: 1 }, "<");
   };
 
   return (
