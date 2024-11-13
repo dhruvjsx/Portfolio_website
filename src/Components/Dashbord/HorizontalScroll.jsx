@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/all";
@@ -12,8 +12,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
 import { Tooltip } from "react-tooltip";
-import SaumitraSirRecommendation from '../../assets/Reviews/SaumitraSirRecommendation.png'
-import AmanSirRecommendation from '../../assets/Reviews/AmanSirRecommendation.png'
+import SaumitraSirRecommendation from "../../assets/Reviews/SaumitraSirRecommendation.png";
+import AmanSirRecommendation from "../../assets/Reviews/AmanSirRecommendation.png";
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 const HorizontalScroll = () => {
@@ -153,9 +153,9 @@ const HorizontalScroll = () => {
     });
   }, []);
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/resumeV2-2.pdf'; // Replace with the actual path
-    link.download = 'Dhruv_Parmar_Resume.pdf'; // The file name for download
+    const link = document.createElement("a");
+    link.href = "/resumeV2-2.pdf"; // Replace with the actual path
+    link.download = "Dhruv_Parmar_Resume.pdf"; // The file name for download
     link.click();
   };
   return (
@@ -213,14 +213,21 @@ const HorizontalScroll = () => {
           </div>
 
           <div className="review-container flex items-center justify-center h-full space-x-4 ">
-  <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
-    <img src={AmanSirRecommendation} alt="Recommendation" className="object-fit" />
-  </div>
-  <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
-    <img src={SaumitraSirRecommendation} alt="Recommendation" className="h-full w-full object-fit" />
-  </div>    
-</div>
-
+            <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
+              <img
+                src={AmanSirRecommendation}
+                alt="Recommendation"
+                className="object-fit"
+              />
+            </div>
+            <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
+              <img
+                src={SaumitraSirRecommendation}
+                alt="Recommendation"
+                className="h-full w-full object-fit"
+              />
+            </div>
+          </div>
         </section>
         <div className="scroll-down absolute flex flex-col justify-center bottom-5  w-[100vw]   text-white font-medium uppercase text-sm">
           <div className="flex arrow text-black flex-col items-center justify-center">
@@ -229,7 +236,7 @@ const HorizontalScroll = () => {
               ref={arrowRef}
               className=" arrowDown mt-2 w-4 h-4 bg-center bg-contain"
             >
-              <MdOutlineKeyboardArrowDown  />
+              <MdOutlineKeyboardArrowDown />
             </div>
           </div>
         </div>
@@ -279,24 +286,28 @@ const HorizontalScroll = () => {
               >
                 <SiLeetcode color="white" size={25} />
               </a>,
-      <div>
-      <div  data-tooltip-id={'download'}
-                        data-tooltip-content={'Download Resume'} onClick={handleDownload} style={{ cursor: 'pointer' }}>
-        <MdOutlineFileDownload color="white" size={25} />
-      </div>
-      <Tooltip
-                        id={'download'}
-                        style={{
-                          borderRadius: "10px",
-                          maxWidth: "350px",
-                          fontSize: "12px",
-                          whiteSpace: "normal",
-                          wordWrap: "break-word",
-                          overflow: "hidden",
-                          zIndex: 20,
-                        }}
-                      />
-    </div>,
+              <div>
+                <div
+                  data-tooltip-id={"download"}
+                  data-tooltip-content={"Download Resume"}
+                  onClick={handleDownload}
+                  style={{ cursor: "pointer" }}
+                >
+                  <MdOutlineFileDownload color="white" size={25} />
+                </div>
+                <Tooltip
+                  id={"download"}
+                  style={{
+                    borderRadius: "10px",
+                    maxWidth: "350px",
+                    fontSize: "12px",
+                    whiteSpace: "normal",
+                    wordWrap: "break-word",
+                    overflow: "hidden",
+                    zIndex: 20,
+                  }}
+                />
+              </div>,
             ].map((num) => (
               <div className="wheel__card absolute top-0 left-0 w-[6%] max-w-[100px] aspect-square cursor-pointer">
                 {num}

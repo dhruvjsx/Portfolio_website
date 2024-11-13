@@ -44,7 +44,7 @@ const Skills = ({setCurrentSection}) => {
           });
 
           // Text reveal animation
-          gsap.from([splitText.words, ".reveal > span"], {
+          gsap.from(splitText.words, {
             opacity: 0,
             ease: "none",
             stagger: 1,
@@ -68,7 +68,7 @@ const Skills = ({setCurrentSection}) => {
     <div id='skills' className="revealText items-center">
       <section   className="h-[100vh] flex items-start justify-center">
         <div className="container">
-          <p  className="reveal text-sm md:text-xl font-serif">
+          <p  className="reveal text-sm whitespace-nowrap md:text-xl font-serif">
             Javascript, Reactjs, StoryBook, Redux, RTK, Nextjs, Nodejs,
             Expressjs, Tailwind CSS, ApexChart, Bootstrap, Hosting, AntD, HTML,
             CSS, SASS, Git, Github, C/C++, AWS, JQuery, Typescript, Threejs
