@@ -37,10 +37,10 @@ const JavascriptParallex = ({setCurrentSection}) => {
         end: "top 25%",
         scrub: true,
         onEnter:()=>{
-            setCurrentSection('javascript')
+            // setCurrentSection('javascript')
         },
                 onEnterBack:()=>{
-            setCurrentSection('javascript')
+            // setCurrentSection('javascript')
           }
       }
     });

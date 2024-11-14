@@ -45,10 +45,10 @@ const   Gallery = ({setCurrentSection}) => {
         pin: ".right",
         scrub: true,
         onEnter:()=>{
-            setCurrentSection('Gallary')
+            setCurrentSection('Achievements')
         },
         onEnterBack:()=>{
-            setCurrentSection('Gallary')
+            setCurrentSection('Achievements')
           }
       });
       firstChild.forEach((detail, index) => {

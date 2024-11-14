@@ -8,6 +8,7 @@ import RatexScreenshot3 from "../../assets/RateX/Screenshot (33).png";
 import RJobMainDashboard from '../../assets/RJobs/mainDashboard.jpg'
 import RJobPreview from '../../assets/RJobs/jobPreview.jpg'
 import RJobDashboard from '../../assets/RJobs/jobsDashboard.jpg'
+import RJobMockup from '../../assets/RJobs/RJobMockup.png'
 
 
 const UniversalProject = ({ project }) => {
@@ -102,7 +103,7 @@ const UniversalProject = ({ project }) => {
       subTitle: "Job Portal for Hospitality",
       tags: "0-to-1 Product Design | SaaS Platform | Web Design | App Design | Stakeholder Management",
       Images: {
-        mockup: RatexMockup,
+        mockup: RJobMockup,
         Image1: RJobMainDashboard,
         Image2: RJobPreview,
         Image3: RJobDashboard,
