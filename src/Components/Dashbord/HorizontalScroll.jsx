@@ -1,4 +1,4 @@
-import React, {  useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/all";
@@ -12,8 +12,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { SiLeetcode } from "react-icons/si";
 import { Tooltip } from "react-tooltip";
-import SaumitraSirRecommendation from '../../assets/Reviews/SaumitraSirRecommendation.png'
-import AmanSirRecommendation from '../../assets/Reviews/AmanSirRecommendation.png'
+import SaumitraSirRecommendation from "../../assets/Reviews/1719047805302.jpeg";
+import AmanSirRecommendation from "../../assets/Reviews/1622627971114.jpeg";
 gsap.registerPlugin(ScrollTrigger, Flip);
 
 const HorizontalScroll = () => {
@@ -24,7 +24,8 @@ const HorizontalScroll = () => {
   const scrollerRef = useRef(null);
   const arrowRef = useRef(null);
   const [text, setText] = useState("Scroll Down");
-
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const reviewRef = useRef(null);
   useGSAP(() => {
     const arrowDirection = arrowRef.current;
     const scroller = containerRef.current;
@@ -39,7 +40,7 @@ const HorizontalScroll = () => {
         pin: true,
         scrub: 1,
         // snap: 1 / (sections.length - 1),
-        end: () => `+=${horizontalScroll.offsetWidth}`,
+        end: () => `+=${horizontalScroll.offsetWidth }`,
       },
     });
     gsap.to(scroller, {
@@ -96,8 +97,8 @@ const HorizontalScroll = () => {
         id: "1",
       },
     });
-
-    const wheel = wheelRef.current;
+ 
+        const wheel = wheelRef.current;
     const images = gsap.utils.toArray(".wheel__card");
 
     let radius, center, slice;
@@ -152,17 +153,18 @@ const HorizontalScroll = () => {
       },
     });
   }, []);
+ 
   const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = '/resumeV2-2.pdf'; // Replace with the actual path
-    link.download = 'Dhruv_Parmar_Resume.pdf'; // The file name for download
+    const link = document.createElement("a");
+    link.href = "/resumeV2-2.pdf"; // Replace with the actual path
+    link.download = "Dhruv_Parmar_Resume.pdf"; // The file name for download
     link.click();
   };
   return (
     <div id="contact" className="outer overflow-hidden ">
       <div
         ref={containerRef}
-        className="scroll  flex flex-col w-[220vw] h-[100vh] overflow-x-hidden"
+        className="scroll  flex flex-col  lg:w-[250vw] h-[100vh] overflow-x-hidden"
       >
         <div className="horizontalText w-[500px] text-black text-6xl font-bold leading-snug mx-4">
           <div>How</div>
@@ -173,7 +175,7 @@ const HorizontalScroll = () => {
           ref={scrollerRef}
           className="horizontalSection mt-5 flex  justify-start px-10 "
         >
-          <div className="grid  w-full grid-cols-3 md:grid-cols-6 gap-4 text-black ">
+ <div className="grid w-full md:w-[65%] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-black">
             <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex  items-center text-center">
               Responsive UI Design
             </div>
@@ -212,15 +214,60 @@ const HorizontalScroll = () => {
             </div>
           </div>
 
-          <div className="review-container flex items-center justify-center h-full space-x-4 ">
-  <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
-    <img src={AmanSirRecommendation} alt="Recommendation" className="object-fit" />
-  </div>
-  <div className="review border  w-[700px] h-[200px] bg-white rounded-sm overflow-hidden px-2">
-    <img src={SaumitraSirRecommendation} alt="Recommendation" className="h-full w-full object-fit" />
-  </div>    
-</div>
 
+          <div  className="review-container  w-[45%] flex items-center justify-center gap-4 h-full space-x-4 ">
+            <div    className="review top border w-[700px] h-[350px]  bg-white rounded-lg shadow-lg p-6">
+              <div  className="flex items-center mb-4">
+                <img
+                  src={AmanSirRecommendation} // replace with the profile image if available
+                  alt="Aman Sharma"
+                  className="w-12 h-12 rounded-full mr-4"
+                />
+                <div>
+                  <h3 className="text-lg font-semibold">Aman Sharma</h3>
+                  <p className="text-sm text-gray-500">
+                    SIH 2020 Winner | Web & App Dev
+                  </p>
+                  <p className="text-xs text-gray-400">November 11, 2024</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-2">
+                <strong>I am pleased to recommend Dhruv</strong> as a talented
+                and dedicated Front-End Developer. His proficiency in React.js
+                and exceptional problem-solving skills make him a valuable
+                member of our team.
+              </p>
+              <p className="text-gray-700">
+                Throughout his time with us, Dhruv has shown a remarkable
+                ability to learn quickly and apply his skills effectively,
+                delivering high-quality code with attention to detail and
+                efficiency. His enthusiasm for tackling challenges and finding
+                innovative solutions is impressive and motivates those around
+                him. He consistently approaches tasks positively, proactively
+                and is willing to take on new responsibilities.
+              </p>
+            </div>
+            <div className="review border w-[700px] h-[350px]  bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
+                <img
+                  src={SaumitraSirRecommendation} // replace with the profile image if available
+                  alt="Aman Sharma"
+                  className="w-12 h-12 rounded-full mr-4"
+                />
+                <div>
+                  <h3 className="text-lg font-semibold">Saumitra Shukla</h3>
+                  <p className="text-sm text-gray-500">
+                  Senior Frontend Developer at Retvens Services | MERN Stack Developer
+                  </p>
+                  <p className="text-xs text-gray-400">November 11, 2024</p>
+                </div>
+              </div>
+              <p className="text-gray-700 mb-2">
+               I had the pleasure of working with Dhruv,  and he’s an outstanding React developer. His expertise in building high-quality, responsive interfaces is impressive, and he consistently delivers clean, optimized code. Dhruv’s attention to detail, combined with his proactive approach to problem-solving, makes him a key asset to any team. He’s also a great communicator and team player, always open to feedback and eager to contribute. <strong> I highly recommend Dhruv</strong> for any role needing a skilled, reliable, and forward-thinking React developer.
+              </p>
+          
+            </div>
+          </div>
         </section>
         <div className="scroll-down absolute flex flex-col justify-center bottom-5  w-[100vw]   text-white font-medium uppercase text-sm">
           <div className="flex arrow text-black flex-col items-center justify-center">
@@ -229,7 +276,7 @@ const HorizontalScroll = () => {
               ref={arrowRef}
               className=" arrowDown mt-2 w-4 h-4 bg-center bg-contain"
             >
-              <MdOutlineKeyboardArrowDown  />
+              <MdOutlineKeyboardArrowDown />
             </div>
           </div>
         </div>
@@ -279,24 +326,28 @@ const HorizontalScroll = () => {
               >
                 <SiLeetcode color="white" size={25} />
               </a>,
-      <div>
-      <div  data-tooltip-id={'download'}
-                        data-tooltip-content={'Download Resume'} onClick={handleDownload} style={{ cursor: 'pointer' }}>
-        <MdOutlineFileDownload color="white" size={25} />
-      </div>
-      <Tooltip
-                        id={'download'}
-                        style={{
-                          borderRadius: "10px",
-                          maxWidth: "350px",
-                          fontSize: "12px",
-                          whiteSpace: "normal",
-                          wordWrap: "break-word",
-                          overflow: "hidden",
-                          zIndex: 20,
-                        }}
-                      />
-    </div>,
+              <div>
+                <div
+                  data-tooltip-id={"download"}
+                  data-tooltip-content={"Download Resume"}
+                  onClick={handleDownload}
+                  style={{ cursor: "pointer" }}
+                >
+                  <MdOutlineFileDownload color="white" size={25} />
+                </div>
+                <Tooltip
+                  id={"download"}
+                  style={{
+                    borderRadius: "10px",
+                    maxWidth: "350px",
+                    fontSize: "12px",
+                    whiteSpace: "normal",
+                    wordWrap: "break-word",
+                    overflow: "hidden",
+                    zIndex: 20,
+                  }}
+                />
+              </div>,
             ].map((num) => (
               <div className="wheel__card absolute top-0 left-0 w-[6%] max-w-[100px] aspect-square cursor-pointer">
                 {num}

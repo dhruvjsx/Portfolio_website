@@ -3,8 +3,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React from "react";
 import rateXicon from "../../assets/RateX/RatexMockup.png";
-
+import RJobMockup from '../../assets/RJobs/RJobMockup.png'
+import adminMockup from '../../assets/AdminPanel/adminMockup.png'
 import RWorld from "../../assets/RWorld/rWorldLightLogo.svg";
+import KanbanVideo from "../../assets/RWorld/kanban.mp4";
 import RJobLogo from "../../assets/RJobs/RJobLogo.svg";
 import NetflixLogo from "../../assets/Netflix/Netflix_Logo.png";
 import { useNavigate } from "react-router-dom";
@@ -23,10 +25,10 @@ projectImage.forEach((image)=>{
           trigger: image,  // Element that triggers the animation
           start: "top 85%", 
           onEnter:()=>{
-            setCurrentSection('My Work')
+            setCurrentSection('Work')
           },
           onEnterBack:()=>{
-            setCurrentSection('My Work')
+            setCurrentSection('Work')
           },
           // Start when top of boxes hits a bit past center of the viewport
           end: "bottom 95%", // End the animation after scrolling 500px past the bottom
@@ -88,8 +90,17 @@ projectImage.forEach((image)=>{
     {/* Project Section 2 */}
     <div className="h-[70vh] py-10 w-full">
       <div className="flex flex-col md:flex-row h-full gap-4 w-full items-end justify-start">
-        <div onClick={()=>navigate('project/R-world')}  className="cursor-pointer w-full md:w-1/2 h-full">
-          <div className="h-full projectImage w-full border border-black"></div>
+        <div onClick={()=>navigate('project/R-world')}  className="cursor-pointer w-full md:w-1/2 flex items-end h-full">
+        <video
+        className="w-full projectImage h-full"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src={KanbanVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
         </div>
         <div className="w-full md:w-1/3">
           <h1 className="text-[#CD505A] font-semibold">RWorld</h1>
@@ -118,7 +129,11 @@ projectImage.forEach((image)=>{
           </div>
         </div>
         <div  onClick={()=>navigate('project/R-job')}  className=" cursor-pointer w-full md:w-1/2 h-full">
-          <div className="h-full projectImage w-full border border-black"></div>
+        <img
+            src={RJobMockup}
+            alt="project"
+            className="h-full projectImage w-full"
+          />
         </div>
       </div>
     </div>
@@ -127,7 +142,11 @@ projectImage.forEach((image)=>{
     <div className="h-[70vh] py-10 w-full">
       <div className="flex flex-col md:flex-row h-full gap-4 w-full items-end justify-start">
         <div  onClick={()=>navigate('project/admin-panel')}  className="w-full cursor-pointer md:w-1/2 h-full">
-          <div className="h-full projectImage w-full border border-black"></div>
+        <img
+            src={adminMockup}
+            alt="project"
+            className="h-full projectImage w-[75%"
+          />
         </div>
         <div className="w-full md:w-1/3">
           <h1 className="text-[#CD505A] font-semibold">Admin Panel</h1>
