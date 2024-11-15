@@ -24,15 +24,15 @@ const AppRouters = () => {
           
           {
             path: "/project/R-world",
-            element: <div className=' '><ScrollToTop/>  <UniversalProject project='RWorld'/></div>,
+            element: <><ScrollToTop/>  <UniversalProject project='RWorld'/></>,
           },
           {
             path: "/project/R-Job",
-            element: <div className=' '><ScrollToTop/>  <UniversalProject project='RJob'/></div>,
+            element: <><ScrollToTop/>  <UniversalProject project='RJob'/></>,
           },
           {
             path: "/project/Admin-panel",
-            element: <div className=' '><ScrollToTop/>  <UniversalProject project='Admin Panel'/></div>,
+            element: <><ScrollToTop/>  <UniversalProject project='Admin Panel'/></>,
           },
       {
           path: "*", 

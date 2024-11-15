@@ -24,8 +24,7 @@ const HorizontalScroll = () => {
   const scrollerRef = useRef(null);
   const arrowRef = useRef(null);
   const [text, setText] = useState("Scroll Down");
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const reviewRef = useRef(null);
+ 
   useGSAP(() => {
     const arrowDirection = arrowRef.current;
     const scroller = containerRef.current;
@@ -40,7 +39,7 @@ const HorizontalScroll = () => {
         pin: true,
         scrub: 1,
         // snap: 1 / (sections.length - 1),
-        end: () => `+=${horizontalScroll.offsetWidth }`,
+        end: () => `+=${horizontalScroll.offsetWidth}`,
       },
     });
     gsap.to(scroller, {
@@ -73,7 +72,7 @@ const HorizontalScroll = () => {
 
     gsap.to(".blackBox", {
       color: "white",
-      border: "1px solid white",
+
       scrollTrigger: {
         trigger: scroller,
         start: "top top",
@@ -93,12 +92,13 @@ const HorizontalScroll = () => {
         containerAnimation: scrollTween,
         start: "-40% left",
         end: "right right",
+        markers:true,
         toggleActions: "play none none reverse",
         id: "1",
       },
     });
- 
-        const wheel = wheelRef.current;
+
+    const wheel = wheelRef.current;
     const images = gsap.utils.toArray(".wheel__card");
 
     let radius, center, slice;
@@ -153,7 +153,7 @@ const HorizontalScroll = () => {
       },
     });
   }, []);
- 
+
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = "/resumeV2-2.pdf"; // Replace with the actual path
@@ -164,60 +164,73 @@ const HorizontalScroll = () => {
     <div id="contact" className="outer overflow-hidden ">
       <div
         ref={containerRef}
-        className="scroll  flex flex-col  lg:w-[250vw] h-[100vh] overflow-x-hidden"
+        className="scroll  flex flex-col w-[200vw] h-[100vh] overflow-x-hidden"
       >
-        <div className="horizontalText w-[500px] text-black text-6xl font-bold leading-snug mx-4">
+        <div className="horizontalText h-[20vh]  overflow-hidden  text-black text-3xl font-bold leading-snug mx-4">
           <div>How</div>
           <div>can I</div>
           <div>help you ?</div>
         </div>
         <section
           ref={scrollerRef}
-          className="horizontalSection mt-5 flex  justify-start px-10 "
+          className="horizontalSection w-full    mt-5 flex  justify-start "
         >
- <div className="grid w-full md:w-[65%] grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 text-black">
-            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex  items-center text-center">
-              Responsive UI Design
+          <div className="flex flex-col w-[85%]  gap-2 h-[60vh] items-center justify-start text-white">
+            <div className="flex h-[60%] justify-center flex-wrap  gap-2 w-[70%]">
+            <div className="flex flex-col gap-2 w-[25%]">
+              <div   className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient h-1/2 border-2 border-black shadow-lg rounded-md    w-full flex items-center justify-center text-center">
+                Modern UI Design
+              </div>
+              <div className="flex gap-2 h-1/2">
+                <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md w-1/2 flex items-center justify-center text-center">
+                  Deployment
+                </div>
+                <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md w-1/2 flex items-center justify-center text-center">
+                  Data Visualization
+                </div>
+              </div>
             </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              Backend
+            <div className="flex flex-col gap-2 w-[20%]">
+              <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md flex-grow h-1/2  w-full flex items-center justify-center text-center">
+                Frontend
+              </div>
+              <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md flex-grow  w-full h-1/2 flex items-center justify-center text-center">
+                Optimization
+              </div>
             </div>
-            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex  items-center text-center">
-              Deployment
+            <div className="flex flex-col gap-2  w-[25%]">
+              <div className="flex gap-2 h-1/2">
+                <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md w-1/2 flex items-center justify-center text-center">
+                  Scalablity
+                </div>
+                <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md w-1/2 flex items-center justify-center text-center">
+                  Innovation
+                </div>
+              </div>
+              <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient h-1/2 border-2 border-black shadow-lg rounded-md    w-full flex items-center justify-center text-center">
+                Team Collaboration
+              </div>
             </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center   h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              Data Visualization
             </div>
-            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              Frontend
-            </div>
-            <div className="bg-white shadow-lg rounded-md p-4  justify-center h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              Optimization
-            </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              Scalability
-            </div>
-            <div className="blackBox bg-transparent  border-2 border-black shadow-lg rounded-md justify-center p-4 h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex  items-center text-center">
-              Innovation
-            </div>
-            <div className="bg-white shadow-lg rounded-md p-4 justify-center h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              Team collaboration
-            </div>
-            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              System Design
-            </div>
-            <div className=" bg-white shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              Customized Solutions
-            </div>
-            <div className="blackBox bg-transparent  border-2 border-black  shadow-lg rounded-md p-4 justify-center  h-[50px] w-[100px] text-xs md:text-base md:h-[200px] md:w-[400px] flex items-center  text-center">
-              3D Animation
+            <div className="flex gap-2 h-[40%] w-[40%]  justify-start ">
+            <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md flex-grow md:w-[25%] h-[100px] md:h-[150px] flex items-center justify-center text-center">
+                Backend
+              </div>
+              <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md flex-grow md:w-[25%] h-[100px] md:h-[150px] flex items-center justify-center text-center">
+                System Design
+              </div>
+              <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md flex-grow md:w-[25%] h-[100px] md:h-[150px] flex items-center justify-center text-center">
+                3D Animation
+              </div>
+              <div className="blackBox transition-shadow duration-300 hover:shadow-blue-bottom  bg-custom-gradient border-2 border-black shadow-lg rounded-md flex-grow md:w-[25%] h-[100px] md:h-[150px] flex items-center justify-center text-center">
+                Customized Solutions
+              </div>
             </div>
           </div>
 
-
-          <div  className="review-container  w-[45%] flex items-center justify-center gap-4 h-full space-x-4 ">
-            <div    className="review top border w-[700px] h-[350px]  bg-white rounded-lg shadow-lg p-6">
-              <div  className="flex items-center mb-4">
+          <div className="review-container h-full flex items-center justify-center gap-4  space-x-4 ">
+            <div className="review top border w-[700px] h-[350px]  bg-white rounded-lg shadow-lg p-6">
+              <div className="flex items-center mb-4">
                 <img
                   src={AmanSirRecommendation} // replace with the profile image if available
                   alt="Aman Sharma"
@@ -257,15 +270,24 @@ const HorizontalScroll = () => {
                 <div>
                   <h3 className="text-lg font-semibold">Saumitra Shukla</h3>
                   <p className="text-sm text-gray-500">
-                  Senior Frontend Developer at Retvens Services | MERN Stack Developer
+                    Senior Frontend Developer at Retvens Services | MERN Stack
+                    Developer
                   </p>
                   <p className="text-xs text-gray-400">November 11, 2024</p>
                 </div>
               </div>
               <p className="text-gray-700 mb-2">
-               I had the pleasure of working with Dhruv,  and he’s an outstanding React developer. His expertise in building high-quality, responsive interfaces is impressive, and he consistently delivers clean, optimized code. Dhruv’s attention to detail, combined with his proactive approach to problem-solving, makes him a key asset to any team. He’s also a great communicator and team player, always open to feedback and eager to contribute. <strong> I highly recommend Dhruv</strong> for any role needing a skilled, reliable, and forward-thinking React developer.
+                I had the pleasure of working with Dhruv, and he’s an
+                outstanding React developer. His expertise in building
+                high-quality, responsive interfaces is impressive, and he
+                consistently delivers clean, optimized code. Dhruv’s attention
+                to detail, combined with his proactive approach to
+                problem-solving, makes him a key asset to any team. He’s also a
+                great communicator and team player, always open to feedback and
+                eager to contribute. <strong> I highly recommend Dhruv</strong>{" "}
+                for any role needing a skilled, reliable, and forward-thinking
+                React developer.
               </p>
-          
             </div>
           </div>
         </section>
@@ -280,7 +302,7 @@ const HorizontalScroll = () => {
             </div>
           </div>
         </div>
-
+    
         <section className="slider-section     absolute  bottom-0 w-[100vw] overflow-y-hidden  h-[15vh]">
           <div
             className="wheel absolute  z-50 color-white  top-5 flex items-end justify-center w-[50vw] h-[50vw] max-w-[400px] max-h-[400px]  left-1/2 transform -translate-x-1/2"
