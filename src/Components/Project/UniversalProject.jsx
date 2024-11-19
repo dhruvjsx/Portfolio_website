@@ -9,6 +9,7 @@ import RJobMainDashboard from '../../assets/RJobs/mainDashboard.jpg'
 import RJobPreview from '../../assets/RJobs/jobPreview.jpg'
 import RJobDashboard from '../../assets/RJobs/jobsDashboard.jpg'
 import RJobMockup from '../../assets/RJobs/RJobMockup.png'
+import { useEffect } from "react";
 
 
 const UniversalProject = ({ project }) => {
@@ -185,6 +186,10 @@ const UniversalProject = ({ project }) => {
   ];
   const filteredData = projectData.find((item) => item?.title === project);
 
+  useEffect(() => {
+    
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="flex flex-col items-center justify-center  min-h-screen px-8 md:px-16 w-full  relative z-20">
       <div className="flex flex-col md:flex-row items-center justify-between gap-16 w-full max-w-6xl">

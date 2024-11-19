@@ -3,36 +3,34 @@ import { createBrowserRouter,
     RouterProvider, } from "react-router-dom";
 import Dashbord from '../Pages/Dashbord';
 import NotFound from '../Components/NotFound';
-import StackingCards from '../Components/StackingCard';
-import Ratex from '../Components/Project/Ratex';
 import ScrollToTop from '../Components/ScrollToTop';
-import RWorld from '../Components/Project/RWorld';
-import Header from '../Components/header';
 import UniversalProject from '../Components/Project/UniversalProject';
+import { useSmoothScroll } from '../Hooks/useSmoothScroll';
 
 const AppRouters = () => {
+    const lenis = useSmoothScroll();
 
     const router = createBrowserRouter([
         {
           path: "/",
-          element: <><ScrollToTop/> <Dashbord/></>,
+          element: <> <ScrollToTop lenis={lenis} /> <Dashbord/></>,
         },
         {
             path: "/project/ratex",
-            element: <><ScrollToTop/><UniversalProject project='RateX'/></>,
+            element: <><ScrollToTop lenis={lenis} /><UniversalProject project='RateX'/></>,
           },
           
           {
             path: "/project/R-world",
-            element: <div className=' '><ScrollToTop/>  <UniversalProject project='RWorld'/></div>,
+            element: <><ScrollToTop lenis={lenis} />  <UniversalProject project='RWorld'/></>,
           },
           {
             path: "/project/R-Job",
-            element: <div className=' '><ScrollToTop/>  <UniversalProject project='RJob'/></div>,
+            element: <><ScrollToTop lenis={lenis} />  <UniversalProject project='RJob'/></>,
           },
           {
             path: "/project/Admin-panel",
-            element: <div className=' '><ScrollToTop/>  <UniversalProject project='Admin Panel'/></div>,
+            element: <><ScrollToTop lenis={lenis} />  <UniversalProject project='Admin Panel'/></>,
           },
       {
           path: "*", 
