@@ -92,7 +92,6 @@ const HorizontalScroll = () => {
         containerAnimation: scrollTween,
         start: "-40% left",
         end: "right right",
-        markers:true,
         toggleActions: "play none none reverse",
         id: "1",
       },
@@ -383,3 +382,4 @@ const HorizontalScroll = () => {
 };
 
 export default HorizontalScroll;
+

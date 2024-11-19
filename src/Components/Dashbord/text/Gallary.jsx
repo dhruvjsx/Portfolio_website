@@ -145,9 +145,9 @@ const   Gallery = ({setCurrentSection}) => {
               </p>
             </div>
             <div data-color='#D3D6F0' className="desktopContentSection">
-              <h1>Blue</h1>
+              <h1>Curiosity-Driven Developer</h1>
               <p>
-                Blue is a color that is often associated with calmness, trust, and reliability...
+                I constantly explore emerging technologies and best practices to stay ahead in the ever-evolving world.For me, the process of learning is never complete—every project, every bug, and every new tool is a step on the path of discovery.
               </p>
             </div>
           </div>
