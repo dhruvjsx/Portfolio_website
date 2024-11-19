@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 function App() {
     
-useSmoothScroll();
+// useSmoothScroll();
 
   return (
 
