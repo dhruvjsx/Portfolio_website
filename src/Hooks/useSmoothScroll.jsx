@@ -1,7 +1,9 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 
 export const useSmoothScroll = () => {
+  const lenisRef = useRef(null);
+
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.3,
@@ -10,11 +12,17 @@ export const useSmoothScroll = () => {
       smooth: true,
     });
 
+    lenisRef.current = lenis;
+
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
 
     requestAnimationFrame(raf);
+
+ 
   }, []);
+
+  return lenisRef.current;
 };
