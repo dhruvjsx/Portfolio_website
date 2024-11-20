@@ -124,9 +124,9 @@ const Header = ({ currentSection,nodelay=false }) => {
         <div className="currentSection hidden flex w-full items-center justify-center text-center text-black text-xs md:text-lg font-semibold">
           {currentSection}
         </div>
-
-        <div className="contentVisible flex w-full items-center px-4 justify-between h-[90%] text-black bg-white rounded-2xl">
-          <div className="overflow-hidden opi">
+ 
+        <div className="contentVisible flex w-full items-center md:px-4 justify-between h-[90%] text-black bg-white rounded-2xl">
+          <div className="hidden  md:flex overflow-hidden opi">
             <img src="" alt="" />
             <div className="text-sm"><a href="/">Dhruvjs</a></div>
           </div>
