@@ -113,12 +113,12 @@ const JavascriptParallex = ({setCurrentSection}) => {
     <div className='flex z-10 overflow-y-hidden javascriptContainer justify-center items-center h-screen relative overflow-hidden'>
       <h1 className='text-lg md:text-4xl textanime space-x-5 md:space-x-20'>JAVASCRIPT</h1>
       <div className="  space">
-        <img className='absolute bottom-[0%]  left-[40%] Reacticon' src={reactLogo} data-speed="-18" alt="React"/>
-        <img className='absolute bottom-[0%] left-[48%] ' src={reduxLogo} data-speed="-14" alt="Redux"/>
-        <img className='absolute bottom-[0%] left-[10%] ' src={tailwindLogo} data-speed="-10" alt="Tailwind"/>
-        <img className='absolute bottom-[0%] left-[90%] ' src={nextjsLogo} data-speed="-12" alt="Next.js"/>
-        <img className='absolute bottom-[0%] left-[30%] w-20 ' src={nodeLogo} data-speed="-14" alt="Node.js"/>
-        <img className='absolute bottom-[0%] left-[80%] ' src={expressLogo} data-speed="-16" alt="Express"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[40%] Reacticon' src={reactLogo} data-speed="-18" alt="React"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[48%] ' src={reduxLogo} data-speed="-14" alt="Redux"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[10%] ' src={tailwindLogo} data-speed="-10" alt="Tailwind"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[90%] ' src={nextjsLogo} data-speed="-12" alt="Next.js"/>
+        <img className='absolute bottom-[0%] w-8  left-[30%] md:w-20 ' src={nodeLogo} data-speed="-14" alt="Node.js"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[80%] ' src={expressLogo} data-speed="-16" alt="Express"/>
       </div>
     </div>
   );
