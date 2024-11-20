@@ -145,9 +145,9 @@ const   Gallery = ({setCurrentSection}) => {
               </p>
             </div>
             <div data-color='#D3D6F0' className="desktopContentSection">
-              <h1>Blue</h1>
+              <h1>Curiosity-Driven Developer</h1>
               <p>
-                Blue is a color that is often associated with calmness, trust, and reliability...
+                I constantly explore emerging technologies and best practices to stay ahead in the ever-evolving world.For me, the process of learning is never complete—every project, every bug, and every new tool is a step on the path of discovery.
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ const   Gallery = ({setCurrentSection}) => {
             <div className="mobilePhoto red">
               <img src={Gallary1} className="object-fill h-full w-full " alt="Project " />
             </div>
-            <h1>Speed Typer</h1>
+            <h1 className="font-semibold">Speed Typer</h1>
             <p className="text-sm"> 
               Speed typist at 110 words per minute, always ready to code and communicate at lightning pace.
               </p>
@@ -166,7 +166,7 @@ const   Gallery = ({setCurrentSection}) => {
             <div className="mobilePhoto green">
             <img src={Gallary2} className="object-fill h-full w-full" alt="Project " />
             </div>
-            <h1>Full Stack Development:</h1>
+            <h1  className="font-semibold">Full Stack Development:</h1>
             <p>
               Full stack developer experienced in MERN stack, delivering end-to-end web solutions
               </p>
@@ -174,16 +174,16 @@ const   Gallery = ({setCurrentSection}) => {
             <div className="mobilePhoto pink">
             <img src={Gallary3} className="object-fill h-full w-full" alt="Project " />
             </div>
-            <h1>Problem Solving</h1>
+            <h1  className="font-semibold">Problem Solving</h1>
             <p>
               Strong foundation in algorithms and data structures, optimizing solutions for performance
               </p>
             <div className="mobilePhoto blue">
             <img src={Gallary4} className="object-fill h-full w-full" alt="Project " />
             </div>
-            <h1>Blue</h1>
+            <h1  className="font-semibold">Curiosity-Driven Developer</h1>
             <p>
-              Blue is a color that is often associated with calmness...
+            I constantly explore emerging technologies and best practices to stay ahead in the ever-evolving world.For me, the process of learning is never complete—every project, every bug, and every new tool is a step on the path of discovery.
             </p>
           </div>
 

@@ -21,8 +21,11 @@ export const useSmoothScroll = () => {
 
     requestAnimationFrame(raf);
 
- 
+    return () => {
+      // Clean up
+      lenis.destroy();
+    };
   }, []);
 
-  return lenisRef.current;
+  return lenisRef;
 };

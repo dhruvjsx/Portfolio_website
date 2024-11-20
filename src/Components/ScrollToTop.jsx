@@ -4,12 +4,11 @@ import { useLocation } from "react-router-dom";
 const ScrollToTop = ({ lenis }) => {
   const { pathname } = useLocation();
 
- 
-
   useEffect(() => {
-    
-    if (lenis) lenis.scrollTo(0, { immediate: true });
-  }, [pathname,lenis]);
+    if (lenis.current) {
+        lenis.current.scrollTo(0, { immediate: true });
+    }
+  }, [pathname, lenis]);
 
   return null;
 };

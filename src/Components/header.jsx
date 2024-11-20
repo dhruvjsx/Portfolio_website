@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import React, {  useRef } from "react";
 
-const Header = ({ currentSection }) => {
+const Header = ({ currentSection,nodelay=false }) => {
   const currentSectionTimeline = useRef(null);
   const previousSection = useRef(currentSection);
   const mm = useRef(gsap.matchMedia());
@@ -13,7 +13,7 @@ const Header = ({ currentSection }) => {
     // Initial animation for content visibility when component mounts
     tl.from(".notch", {
       width: 0,
-      delay:5.2,
+      delay:nodelay?0:5.2,
       duration: 1.8,
       ease: "power2.out",
     })
@@ -128,7 +128,7 @@ const Header = ({ currentSection }) => {
         <div className="contentVisible flex w-full items-center px-4 justify-between h-[90%] text-black bg-white rounded-2xl">
           <div className="overflow-hidden opi">
             <img src="" alt="" />
-            <div className="text-sm"><a href="#">Dhruvjs</a></div>
+            <div className="text-sm"><a href="/">Dhruvjs</a></div>
           </div>
           <div className="flex gap-2 md:gap-4 text-xs md:text-base items-center justify-center">
             <div  className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "skills")}>Skill</div></div>

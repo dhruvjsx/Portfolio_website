@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import RatexMockup from "../../assets/RateX/RatexMockup.png";
 import StackingCards from "../StackingCard";
 import RateXDashboard from "../../assets/RateX/rateXDashboard.png";
@@ -10,9 +10,12 @@ import RJobPreview from '../../assets/RJobs/jobPreview.jpg'
 import RJobDashboard from '../../assets/RJobs/jobsDashboard.jpg'
 import RJobMockup from '../../assets/RJobs/RJobMockup.png'
 import { useEffect } from "react";
+import Header from "../header";
 
 
 const UniversalProject = ({ project }) => {
+      const [currentSection, setCurrentSection] = useState();
+
   const projectData = [
     {
       title: "RateX",
@@ -192,6 +195,7 @@ const UniversalProject = ({ project }) => {
   }, []);
   return (
     <div className="flex flex-col items-center justify-center  min-h-screen px-8 md:px-16 w-full  relative z-20">
+          <Header nodelay={true} currentSection={currentSection} />
       <div className="flex flex-col md:flex-row items-center justify-between gap-16 w-full max-w-6xl">
         <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
           <h1 className="text-[#CD505A] font-semibold text-2xl md:text-3xl mb-2">
