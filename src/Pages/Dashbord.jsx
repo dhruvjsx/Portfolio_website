@@ -6,7 +6,7 @@ import React, {
   useLayoutEffect,
   useRef,
 } from "react";
-import ContactMeMobile from "../Components/Dashbord/ContactMeMobile";
+
 
 // Dynamically import components using React.lazy
 const Header = lazy(() => import("../Components/header"));
@@ -20,20 +20,15 @@ const Skills = lazy(() => import("../Components/Dashbord/Skills"));
 const HorizontalScroll = lazy(() =>
   import("../Components/Dashbord/HorizontalScroll")
 );
+const ContactMeMobile = lazy(() =>
+  import("../Components/Dashbord/ContactMeMobile")
+);
 
-const Dashbord = () => {
+const Dashbord = ({isDesktop,windowSize}) => {
   const [currentSection, setCurrentSection] = useState();
-  const [isDesktop, setIsDesktop] = useState();
-  const windowSize = useRef(null);
-  useLayoutEffect(() => {
-    let mm = gsap.matchMedia(windowSize);
-    mm.add("(min-width: 600px)", () => {
-      setIsDesktop(true);
-      return () => {
-        // console.log("mobile");
-      };
-    });
-  });
+ 
+
+
  
 
   return (
@@ -73,7 +68,9 @@ const Dashbord = () => {
           <HorizontalScroll />
         </Suspense>
       ) : (
+        <Suspense fallback={<div>Loading Horizontal Scroll...</div>}>
         <ContactMeMobile setCurrentSection={setCurrentSection} isDesktop={isDesktop}/>
+        </Suspense>
       )}
     </div>
   );

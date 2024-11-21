@@ -10,22 +10,27 @@ import { SiLeetcode } from "react-icons/si";
 import { Tooltip } from "react-tooltip";
 import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
 const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
-
     useGSAP(() => {
+        // Ensure ScrollTrigger registers element correctly
+        ScrollTrigger.refresh();
+      
         // Apply animation to .contact-me
         gsap.to(".contact-me", {
           backgroundColor: "black",
           color: "white",
           scrollTrigger: {
-            trigger: ".contact-me", // Trigger is based on '.contact-me'
+            trigger: "#contactMe", // Ensure ScrollTrigger watches this element
             start: "top 50%",
             end: "bottom top",
             toggleActions: "play reverse play reverse",
+            markers: true, // For debugging scroll positions
             onEnter: () => {
+                debugger
               gsap.to("#work", {
                 backgroundColor: "black",
-                color: "white",// Change #work background color
+                color: "white", // Change #work background color
                 duration: 0.5, // Add smooth transition
               });
               setCurrentSection("Contact");
@@ -54,7 +59,8 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
             },
           },
         });
-      });
+      }, []);
+      
       
     const handleDownload = () => {
         const link = document.createElement("a");
@@ -63,7 +69,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
         link.click();
       };
   return (
-    <div  className="h-auto contact-me w-[100vw] ">
+    <div id='contactMe' className="h-auto contact-me w-[100vw] ">
     <div className="horizontalText h-[20vh] overflow-hidden text-white text-3xl font-bold leading-snug mx-4">
       <div>How</div>
       <div>can I</div>

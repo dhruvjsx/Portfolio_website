@@ -13,7 +13,7 @@ import { useEffect } from "react";
 import Header from "../header";
 
 
-const UniversalProject = ({ project }) => {
+const UniversalProject = ({ project,isDesktop }) => {
       const [currentSection, setCurrentSection] = useState();
 
   const projectData = [
@@ -219,9 +219,9 @@ const UniversalProject = ({ project }) => {
       </div>
 
       {/* StackingCards Section */}
-      <div className="mt-16 w-full h-full   oveflow-hidden">
+   {isDesktop&&   <div className="mt-16 w-full h-full   oveflow-hidden">
         <StackingCards filteredData={filteredData} />
-      </div>
+      </div>}
     </div>
   );
 };
