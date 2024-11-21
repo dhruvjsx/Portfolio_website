@@ -32,7 +32,9 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
                 backgroundColor: "black",
                 color: "white", // Change #work background color
                 // duration: 0.5, // Add smooth transition
+                
               });
+              gsap.to(".dynamic-island", { backgroundColor: "white", color:'black'});
               setCurrentSection("Contact");
             },
             onEnterBack: () => {
@@ -41,6 +43,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
                 // duration: 0.5,
                 color: "white",
               });
+              gsap.to(".dynamic-island", { backgroundColor: "white", color:'black'});
               setCurrentSection("Contact");
             },
             onLeave: () => {
@@ -49,6 +52,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
                 // duration: 0.5,
                 color: "",
               });
+              gsap.to(".dynamic-island", { backgroundColor: "black", color:'white'});
             },
             onLeaveBack: () => {
               gsap.to("#work", {
@@ -56,6 +60,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
                 // duration: 0.5,
                 color: "",
               });
+              gsap.to(".dynamic-island", { backgroundColor: "black", color:'white'});
             },
           },
         });

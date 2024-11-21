@@ -1,20 +1,20 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
-import React, {  useRef } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ currentSection,nodelay=false }) => {
+const Header = ({ currentSection, nodelay = false }) => {
   const currentSectionTimeline = useRef(null);
   const previousSection = useRef(currentSection);
   const mm = useRef(gsap.matchMedia());
-const navigate = useNavigate()
+  const navigate = useNavigate();
   useGSAP(() => {
     const tl = gsap.timeline();
 
     // Initial animation for content visibility when component mounts
     tl.from(".notch", {
       width: 0,
-      delay:nodelay?0:5.2,
+      delay: nodelay ? 0 : 5.2,
       duration: 1.8,
       ease: "power2.out",
     })
@@ -68,7 +68,7 @@ const navigate = useNavigate()
           .to(
             ".notch",
             {
-              width: isDesktop ? nodelay?'fit-content': "15%" : "25%",
+              width: isDesktop ? (nodelay ? "fit-content" : "15%") : "25%",
               duration: 1.8,
               ease: "power2.out",
             },
@@ -82,7 +82,7 @@ const navigate = useNavigate()
             ease: "expo.inOut",
           })
           .to(".notch", {
-            width: isDesktop ? nodelay?'fit-content':"40%" : "60%",
+            width: isDesktop ? (nodelay ? "fit-content" : "40%") : "60%",
             duration: 1.5,
             ease: "power2.out",
           })
@@ -114,39 +114,63 @@ const navigate = useNavigate()
       const offsetPosition = element.offsetTop + 100;
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
   };
 
   return (
     <div className="fixed top-0 left-0 w-full z-50 h-[7vh] flex justify-center items-center px-3 py-1 pointer-events-none">
-      <div className={`${nodelay ?'md:w-fit' :' md:w-[40%]'} w-[60%] flex items-center px-4 justify-evenly h-[90%] text-white bg-white rounded-2xl notch pointer-events-auto`}>
-        <div className="currentSection hidden flex w-full items-center justify-center text-center text-black text-xs md:text-lg font-semibold">
+      <div
+        className={`${
+          nodelay ? "md:w-fit" : " md:w-[35%]"
+        } w-[60%] flex items-center px-4 justify-evenly dynamic-island h-[90%] text-white bg-black rounded-2xl notch pointer-events-auto`}
+      >
+        <div className="currentSection hidden flex w-full items-center justify-center text-center text-xs md:text-lg font-semibold">
           {currentSection}
         </div>
- 
- {   nodelay? <div className="contentVisible flex w-fit items-center md:px-4 justify-center h-[90%] text-black bg-white rounded-2xl">
 
- <div className="flex whitespace-nowrap" onClick={() => {
- 
-
-    navigate('/');
-    window.location.reload();
-}}>View Dashboard</div>
- </div> :    <div className="contentVisible flex w-full items-center md:px-4 justify-between h-[90%] text-black bg-white rounded-2xl">
-          <div className="hidden  md:flex overflow-hidden opi">
-            <img src="" alt="" />
-            <div className="text-sm"><a href="/">Dhruvjs</a></div>
+        {nodelay ? (
+          <div className="contentVisible flex w-fit items-center md:px-4 justify-center h-[90%]  rounded-2xl">
+            <div
+              className="flex whitespace-nowrap cursor-pointer"
+              onClick={() => {
+                navigate("/");
+                window.location.reload();
+              }}
+            >
+              View Dashboard
+            </div>
           </div>
-          <div className="flex gap-2 md:gap-4 text-xs w-full md:w-auto md:text-base items-center justify-center">
-            <div className="headerContent"><div onClick={(e) => scrollToSection(e, "Specialties")}>Specialties</div></div>
-            <div  className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "skills")}>Skill</div></div>
-            <div className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "work")}>Work</div></div>
-            <div className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "contact")}>Contact</div></div>
+        ) : (
+          <div className="contentVisible flex w-full items-center md:px-4 justify-between h-[90%]  rounded-2xl">
+            <div className="hidden  md:flex overflow-hidden opi">
+              <img src="" alt="" />
+              <div className="text-sm">
+                <a href="/">Dhruvjs</a>
+              </div>
+            </div>
+            <div className="flex gap-2 md:gap-4 text-xs w-full md:w-auto md:text-base items-center justify-center">
+              <div className="headerContent">
+                <div onClick={(e) => scrollToSection(e, "Specialties")}>
+                  Specialties
+                </div>
+              </div>
+              <div className="headerContent cursor-pointer">
+                <div onClick={(e) => scrollToSection(e, "skills")}>Skill</div>
+              </div>
+              <div className="headerContent cursor-pointer">
+                <div onClick={(e) => scrollToSection(e, "work")}>Work</div>
+              </div>
+              <div className="headerContent cursor-pointer">
+                <div onClick={(e) => scrollToSection(e, "contact")}>
+                  Contact
+                </div>
+              </div>
+            </div>
           </div>
-        </div>}
-      </div>  
+        )}
+      </div>
     </div>
   );
 };

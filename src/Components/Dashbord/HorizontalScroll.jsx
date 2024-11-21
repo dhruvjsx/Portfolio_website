@@ -52,9 +52,11 @@ const HorizontalScroll = () => {
         // scrub: true,
         onEnter: () => {
           gsap.to(".arrow", { color: "white" });
+          gsap.to(".dynamic-island", { backgroundColor: "white", color:'black'});
         },
         onLeaveBack: () => {
           gsap.to(".arrow", { color: "black" });
+          gsap.to(".dynamic-island", { backgroundColor: "black", color:'white'});
         },
       },
     });
