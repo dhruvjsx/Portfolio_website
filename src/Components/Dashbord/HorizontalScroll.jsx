@@ -52,9 +52,11 @@ const HorizontalScroll = () => {
         // scrub: true,
         onEnter: () => {
           gsap.to(".arrow", { color: "white" });
+          gsap.to(".dynamic-island", { backgroundColor: "white", color:'black'});
         },
         onLeaveBack: () => {
           gsap.to(".arrow", { color: "black" });
+          gsap.to(".dynamic-island", { backgroundColor: "black", color:'white'});
         },
       },
     });
@@ -241,6 +243,7 @@ const HorizontalScroll = () => {
                     SIH 2020 Winner | Web & App Dev
                   </p>
                   <p className="text-xs text-gray-400">November 11, 2024</p>
+                  <p className="text-xs text-gray-400">Aman managed Dhruv directly</p>
                 </div>
               </div>
               <p className="text-gray-700 mb-2">
@@ -273,6 +276,7 @@ const HorizontalScroll = () => {
                     Developer
                   </p>
                   <p className="text-xs text-gray-400">November 11, 2024</p>
+                    <p className="text-xs text-gray-400">Saumitra managed Dhruv directly</p>
                 </div>
               </div>
               <p className="text-gray-700 mb-2">

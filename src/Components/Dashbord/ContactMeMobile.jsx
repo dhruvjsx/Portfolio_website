@@ -27,12 +27,14 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
             toggleActions: "play reverse play reverse",
             // markers: true, // For debugging scroll positions
             onEnter: () => {
-                debugger
+                
               gsap.to("#work", {
                 backgroundColor: "black",
                 color: "white", // Change #work background color
                 // duration: 0.5, // Add smooth transition
+                
               });
+              gsap.to(".dynamic-island", { backgroundColor: "white", color:'black'});
               setCurrentSection("Contact");
             },
             onEnterBack: () => {
@@ -41,6 +43,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
                 // duration: 0.5,
                 color: "white",
               });
+              gsap.to(".dynamic-island", { backgroundColor: "white", color:'black'});
               setCurrentSection("Contact");
             },
             onLeave: () => {
@@ -49,6 +52,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
                 // duration: 0.5,
                 color: "",
               });
+              gsap.to(".dynamic-island", { backgroundColor: "black", color:'white'});
             },
             onLeaveBack: () => {
               gsap.to("#work", {
@@ -56,6 +60,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
                 // duration: 0.5,
                 color: "",
               });
+              gsap.to(".dynamic-island", { backgroundColor: "black", color:'white'});
             },
           },
         });
@@ -114,6 +119,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
               SIH 2020 Winner | Web & App Dev
             </p>
             <p className="text-xs text-gray-400">November 11, 2024</p>
+            <p className="text-xs text-gray-400"> Aman managed Dhruv directly</p>
           </div>
         </div>
         <p className="text-gray-700 mb-2">
@@ -140,12 +146,13 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
             className="w-12 h-12 rounded-full mr-4"
           />
           <div>
-            <h3 className="text-lg font-semibold">Saumitra Shukla</h3>
+            <h3 className="text-lg text-black font-semibold">Saumitra Shukla</h3>
             <p className="text-sm text-gray-500">
               Senior Frontend Developer at Retvens Services | MERN Stack
               Developer
             </p>
             <p className="text-xs text-gray-400">November 11, 2024</p>
+            <p className="text-xs text-gray-400">Saumitra managed Dhruv directly</p>
           </div>
         </div>
         <p className="text-gray-700 mb-2">

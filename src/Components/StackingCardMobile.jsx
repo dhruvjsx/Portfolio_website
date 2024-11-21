@@ -3,7 +3,7 @@ import React from 'react'
 const StackingCardMobile = ({filteredData}) => {
   return (
     <div>
-        <div className="   para   top-0  ">
+        <div className="ip   para   top-0  ">
           <div className="description w-full">
             <div className="flex flex-col w-full items-center py-12 px-2">
               <h1 className="text-4xl font-semibold text-gray-800 mb-6 text-center">
