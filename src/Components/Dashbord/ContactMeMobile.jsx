@@ -25,20 +25,20 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
             start: "top 50%",
             end: "bottom top",
             toggleActions: "play reverse play reverse",
-            markers: true, // For debugging scroll positions
+            // markers: true, // For debugging scroll positions
             onEnter: () => {
                 debugger
               gsap.to("#work", {
                 backgroundColor: "black",
                 color: "white", // Change #work background color
-                duration: 0.5, // Add smooth transition
+                // duration: 0.5, // Add smooth transition
               });
               setCurrentSection("Contact");
             },
             onEnterBack: () => {
               gsap.to("#work", {
                 backgroundColor: "black", // Ensure consistency when scrolling back
-                duration: 0.5,
+                // duration: 0.5,
                 color: "white",
               });
               setCurrentSection("Contact");
@@ -46,14 +46,14 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
             onLeave: () => {
               gsap.to("#work", {
                 backgroundColor: "", // Reset #work background color
-                duration: 0.5,
+                // duration: 0.5,
                 color: "",
               });
             },
             onLeaveBack: () => {
               gsap.to("#work", {
                 backgroundColor: "", // Reset when scrolling back past .contact-me
-                duration: 0.5,
+                // duration: 0.5,
                 color: "",
               });
             },
