@@ -130,7 +130,7 @@ const Header = ({ currentSection,nodelay=false }) => {
             <img src="" alt="" />
             <div className="text-sm"><a href="/">Dhruvjs</a></div>
           </div>
-          <div className="flex gap-2 md:gap-4 text-xs md:text-base items-center justify-center">
+          <div className="flex gap-2 md:gap-4 text-xs w-full md:w-auto md:text-base items-center justify-center">
             <div  className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "skills")}>Skill</div></div>
             <div className="headerContent cursor-pointer"><div onClick={(e) => scrollToSection(e, "work")}>Work</div></div>
             <div className="headerContent">Achievement</div>

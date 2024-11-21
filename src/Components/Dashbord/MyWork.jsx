@@ -65,7 +65,7 @@ projectImage.forEach((image)=>{
 >
   <div className="w-[90%] md:w-[70%] mx-auto">
     {/* Project Section 1 */}
-    <div className="h-[70vh] py-10 w-full">
+    <div className=" md:h-[70vh] min-h-[70vh] md:min-h-auto py-10 w-full">
       <div className="flex flex-col-reverse md:flex-row h-full gap-6 md:gap-2 w-full items-end justify-start">
         <div className="w-full md:w-1/3">
           <h1 className="text-[#CD505A] font-semibold">Ratex</h1>
@@ -88,7 +88,7 @@ projectImage.forEach((image)=>{
     </div>
 
     {/* Project Section 2 */}
-    <div className="h-[70vh] py-10 w-full">
+    <div className="md:h-[70vh] min-h-[70vh] md:min-h-auto py-10 w-full">
       <div className="flex flex-col md:flex-row h-full gap-4 w-full items-end justify-start">
         <div onClick={()=>navigate('project/R-world')}  className="cursor-pointer w-full md:w-1/2 flex items-end h-full">
         <video
@@ -116,7 +116,7 @@ projectImage.forEach((image)=>{
     </div>
 
     {/* Project Section 3 */}
-    <div className="h-[70vh] py-10 w-full">
+    <div className="md:h-[70vh] min-h-[70vh] md:min-h-auto py-10 w-full">
       <div className="flex flex-col-reverse md:flex-row h-full gap-2 w-full items-end justify-start">
         <div className="w-full md:w-1/3">
           <h1 className="text-[#CD505A] font-semibold">R-jobs</h1>
@@ -139,7 +139,7 @@ projectImage.forEach((image)=>{
     </div>
 
     {/* Project Section 4 */}
-    <div className="h-[70vh] py-10 w-full">
+    <div className="md:h-[70vh] min-h-[70vh] md:min-h-auto py-10 w-full">
       <div className="flex flex-col md:flex-row h-full gap-4 w-full items-end justify-start">
         <div  onClick={()=>navigate('project/admin-panel')}  className="w-full cursor-pointer md:w-1/2 h-full">
         <img

@@ -11,9 +11,10 @@ import RJobDashboard from '../../assets/RJobs/jobsDashboard.jpg'
 import RJobMockup from '../../assets/RJobs/RJobMockup.png'
 import { useEffect } from "react";
 import Header from "../header";
+import StackingCardMobile from "../StackingCardMobile";
 
 
-const UniversalProject = ({ project }) => {
+const UniversalProject = ({ project,isDesktop }) => {
       const [currentSection, setCurrentSection] = useState();
 
   const projectData = [
@@ -196,7 +197,7 @@ const UniversalProject = ({ project }) => {
   return (
     <div className="flex flex-col items-center justify-center  min-h-screen px-8 md:px-16 w-full  relative z-20">
           <Header nodelay={true} currentSection={currentSection} />
-      <div className="flex flex-col md:flex-row items-center justify-between gap-16 w-full max-w-6xl">
+      <div className="flex flex-col md:flex-row items-center mt-20 justify-between gap-16 w-full max-w-6xl">
         <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
           <h1 className="text-[#CD505A] font-semibold text-2xl md:text-3xl mb-2">
             {filteredData?.title}
@@ -204,7 +205,7 @@ const UniversalProject = ({ project }) => {
           <p className="text-[#444346] font-SharpGrotesk text-lg md:text-xl">
             {filteredData?.subTitle}
           </p>
-          <div className="mt-3 text-sm md:text-base text-[#444346] font-medium leading-relaxed">
+          <div className="mt-3 text-sm md:text-base text-[#444346] font-medium leading-relaxed">2mt-20
             {filteredData?.tags}
           </div>
         </div>
@@ -219,9 +220,11 @@ const UniversalProject = ({ project }) => {
       </div>
 
       {/* StackingCards Section */}
-      <div className="mt-16 w-full h-full   oveflow-hidden">
+   {isDesktop?  <div className="mt-16 w-full h-full   oveflow-hidden">
         <StackingCards filteredData={filteredData} />
-      </div>
+      </div>:<div className="mt-16 w-full h-full   oveflow-hidden">
+        <StackingCardMobile filteredData={filteredData} />
+      </div>}
     </div>
   );
 };

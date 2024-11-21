@@ -55,10 +55,10 @@ const StackingCards = ({filteredData}) => {
   return (
     <div className="flex flex-col items-center justify-center">
       {/* <h1 className="text-4xl font-light">Description</h1> */}
-      <div className="stackingContainer relative flex gap-4   w-full justify-start items-start">
+      <div className="stackingContainer relative flex flex-col-reverse md:flex-row gap-4   w-full justify-start items-start">
         <div className="cards">
           <div
-            className="card  h-[250px] rounded-lg overflow-hidden w-[500px] mb-12 shadow-md"
+            className="card  h-[250px] rounded-lg overflow-hidden w-full md:w-[500px] mb-12 shadow-md"
             style={{ top: "40px" }}
           >
             <img
@@ -68,7 +68,7 @@ const StackingCards = ({filteredData}) => {
             />
           </div>
           <div
-            className="card bg-white h-[250px] rounded-lg overflow-hidden w-[500px] mb-12"
+            className="card bg-white h-[250px] rounded-lg overflow-hidden w-full md:w-[500px] mb-12"
             style={{ top: "45px" }}
           >
             <img
@@ -78,7 +78,7 @@ const StackingCards = ({filteredData}) => {
             />
           </div>
           <div
-            className="card bg-white h-[250px] rounded-lg overflow-hidden w-[500px] mb-12"
+            className="card bg-white h-[250px] rounded-lg overflow-hidden w-full md:w-[500px] mb-12"
             style={{ top: "50px" }}
           >
             <img
