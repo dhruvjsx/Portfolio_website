@@ -236,7 +236,7 @@ const HorizontalScroll = () => {
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
-                  <h3 className="text-lg font-semibold">Aman Sharma</h3>
+                  <h3 className="text-lg text-black font-semibold">Aman Sharma</h3>
                   <p className="text-sm text-gray-500">
                     SIH 2020 Winner | Web & App Dev
                   </p>
@@ -267,7 +267,7 @@ const HorizontalScroll = () => {
                   className="w-12 h-12 rounded-full mr-4"
                 />
                 <div>
-                  <h3 className="text-lg font-semibold">Saumitra Shukla</h3>
+                  <h3 className="text-lg text-black font-semibold">Saumitra Shukla</h3>
                   <p className="text-sm text-gray-500">
                     Senior Frontend Developer at Retvens Services | MERN Stack
                     Developer
@@ -376,6 +376,7 @@ const HorizontalScroll = () => {
             ))}
           </div>
         </section>
+        
       </div>
     </div>
   );
