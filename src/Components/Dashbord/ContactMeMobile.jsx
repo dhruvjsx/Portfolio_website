@@ -27,7 +27,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
             toggleActions: "play reverse play reverse",
             // markers: true, // For debugging scroll positions
             onEnter: () => {
-                debugger
+                
               gsap.to("#work", {
                 backgroundColor: "black",
                 color: "white", // Change #work background color
@@ -114,6 +114,7 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
               SIH 2020 Winner | Web & App Dev
             </p>
             <p className="text-xs text-gray-400">November 11, 2024</p>
+            <p className="text-xs text-gray-400"> Aman managed Dhruv directly</p>
           </div>
         </div>
         <p className="text-gray-700 mb-2">
@@ -140,12 +141,13 @@ const ContactMeMobile = ({isDesktop,setCurrentSection}) => {
             className="w-12 h-12 rounded-full mr-4"
           />
           <div>
-            <h3 className="text-lg font-semibold">Saumitra Shukla</h3>
+            <h3 className="text-lg text-black font-semibold">Saumitra Shukla</h3>
             <p className="text-sm text-gray-500">
               Senior Frontend Developer at Retvens Services | MERN Stack
               Developer
             </p>
             <p className="text-xs text-gray-400">November 11, 2024</p>
+            <p className="text-xs text-gray-400">Saumitra managed Dhruv directly</p>
           </div>
         </div>
         <p className="text-gray-700 mb-2">

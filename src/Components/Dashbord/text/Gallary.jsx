@@ -122,7 +122,7 @@ const   Gallery = ({setCurrentSection}) => {
 
   return (
     <div ref={comp}>
-      <div ref={galleryRef} className="gallery">
+      <div ref={galleryRef} id="Specialties" className="gallery">
         <div className="flex mx-auto w-[60%]">
         <div className="left">
           <div className="desktopContent ">

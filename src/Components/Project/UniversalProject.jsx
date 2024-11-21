@@ -191,7 +191,7 @@ const UniversalProject = ({ project,isDesktop }) => {
   const filteredData = projectData.find((item) => item?.title === project);
 
   useEffect(() => {
-    
+   
     window.scrollTo(0, 0);
   }, []);
   return (

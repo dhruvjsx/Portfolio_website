@@ -241,6 +241,7 @@ const HorizontalScroll = () => {
                     SIH 2020 Winner | Web & App Dev
                   </p>
                   <p className="text-xs text-gray-400">November 11, 2024</p>
+                  <p className="text-xs text-gray-400">Aman managed Dhruv directly</p>
                 </div>
               </div>
               <p className="text-gray-700 mb-2">
@@ -273,6 +274,7 @@ const HorizontalScroll = () => {
                     Developer
                   </p>
                   <p className="text-xs text-gray-400">November 11, 2024</p>
+                    <p className="text-xs text-gray-400">Saumitra managed Dhruv directly</p>
                 </div>
               </div>
               <p className="text-gray-700 mb-2">

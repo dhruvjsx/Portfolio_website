@@ -47,7 +47,7 @@ const Dashbord = ({isDesktop,windowSize}) => {
 
       <div className="w-full h-[100vh]">
         <Suspense fallback={<div>Loading Javascript Parallex...</div>}>
-          <JavascriptParallex setCurrentSection={setCurrentSection} />
+          <JavascriptParallex isDesktop={isDesktop} setCurrentSection={setCurrentSection} />
         </Suspense>
       </div>
 
