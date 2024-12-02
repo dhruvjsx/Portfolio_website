@@ -113,12 +113,12 @@ const JavascriptParallex = ({setCurrentSection,isDesktop}) => {
     <div className='flex z-10 overflow-y-hidden javascriptContainer justify-center items-center h-screen relative overflow-hidden'>
       <h1 className='text-lg md:text-4xl textanime space-x-5 md:space-x-20'>JAVASCRIPT</h1>
       <div className="  space">
-        <img className='absolute bottom-[0%] w-8 md:w-auto left-[40%] Reacticon' src={reactLogo} data-speed={`${isDesktop?'-18':'-25'}`} alt="React"/>
-        <img className='absolute bottom-[0%] w-8 md:w-auto left-[48%] ' src={reduxLogo} data-speed={`${isDesktop?'-14':'-21'}`} alt="Redux"/>
-        <img className='absolute bottom-[0%] w-8 md:w-auto left-[10%] ' src={tailwindLogo} data-speed={`${isDesktop?'-10':'-17'}`} alt="Tailwind"/>
-        <img className='absolute bottom-[0%] w-8 md:w-auto left-[90%] ' src={nextjsLogo} data-speed={`${isDesktop?'-12':'-27'}`}   alt="Next.js"/>
-        <img className='absolute bottom-[0%] w-8  left-[30%] md:w-20 ' src={nodeLogo} data-speed="-14" alt="Node.js"/>
-        <img className='absolute bottom-[0%] w-8 md:w-auto left-[80%] ' src={expressLogo} data-speed="-16" alt="Express"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[40%] Reacticon' src={reactLogo} data-speed={`${isDesktop?'-18':'-25'}`} alt="Dhruv React logo"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[48%] ' src={reduxLogo} data-speed={`${isDesktop?'-14':'-21'}`} alt="Dhruvjs Redux"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[10%] ' src={tailwindLogo} data-speed={`${isDesktop?'-10':'-17'}`} alt="Dhruvjsx Tailwind"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[90%] ' src={nextjsLogo} data-speed={`${isDesktop?'-12':'-27'}`}   alt="Dhruv Parmar Next.js"/>
+        <img className='absolute bottom-[0%] w-8  left-[30%] md:w-20 ' src={nodeLogo} data-speed="-14" alt="Dhruv Node.js"/>
+        <img className='absolute bottom-[0%] w-8 md:w-auto left-[80%] ' src={expressLogo} data-speed="-16" alt="DHRUV Express"/>
       </div>
     </div>
   );

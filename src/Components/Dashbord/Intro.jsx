@@ -125,7 +125,7 @@ const Intro = () => {
 
       {/* Main Image */}
       <div className="dhruvoid w-full flex items-center justify-center ml-28 z-10 absolute bottom-0">
-        <img src={dhruvoid} className="w-[250px] md:w-[500px]" alt="" />
+        <img src={dhruvoid} alt="Dhruv Parmar - Frontend JavaScript Developer" className="w-[250px] md:w-[500px]" />
       </div>
 
       <div
