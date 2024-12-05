@@ -8,7 +8,7 @@ import RatexScreenshot3 from "../../assets/RateX/Screenshot (33).png";
 import RJobMainDashboard from '../../assets/RJobs/mainDashboard.jpg'
 import RWoorldDashboard from '../../assets/RWorld/RWorldDashboard.png'
 import RWoorldDashboard2 from '../../assets/RWorld/RWorldDashboard2.png'
-import RWorldTaskScreen from '../../assets/RWorld/RWorldTaskScreen.png'
+import RWorldTaskScreen from '../../assets/RWorld/RworldTaskScreen.png'
 import RWorldTaskScreen2 from '../../assets/RWorld/taskManagement2.png'
 import RJobPreview from '../../assets/RJobs/jobPreview.jpg'
 import RJobDashboard from '../../assets/RJobs/jobsDashboard.jpg'
