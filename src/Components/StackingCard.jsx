@@ -57,7 +57,7 @@ const StackingCards = ({filteredData}) => {
       {/* <h1 className="text-4xl font-light">Description</h1> */}
       <div className="stackingContainer relative flex flex-col-reverse md:flex-row gap-4   w-full justify-start items-start">
         <div className="cards">
-          <div
+          {/* <div
             className="card  h-[250px] rounded-lg overflow-hidden w-full md:w-[500px] mb-12 shadow-md"
             style={{ top: "40px" }}
           >
@@ -66,14 +66,14 @@ const StackingCards = ({filteredData}) => {
               className="w-full h-full rounded-lg object-cover"
               alt=""
             />
-          </div>
+          </div> */}
           <div
             className="card bg-white h-[250px] rounded-lg overflow-hidden w-full md:w-[500px] mb-12"
             style={{ top: "45px" }}
           >
             <img
               src={filteredData?.Images?.Image1}
-              className="w-full h-full rounded-lg object-cover"
+              className="w-full h-full rounded-lg object-fit"
               alt=""
             />
           </div>
@@ -109,7 +109,7 @@ const StackingCards = ({filteredData}) => {
           </div>
         </div>
         {/* Sticky description div */}
-        <div className="p-4   para  sticky top-0  ">
+        <div className="p-4 w-[45%]  para  sticky top-0  ">
           <div className="description">
             <div className="flex flex-col items-center py-12 px-4 ">
               <h1 className="text-4xl font-semibold text-gray-800 mb-6 text-center">

@@ -6,9 +6,14 @@ import RatexScreenshot from "../../assets/RateX/Screenshot (31).png";
 import RatexScreenshot2 from "../../assets/RateX/Screenshot (32).png";
 import RatexScreenshot3 from "../../assets/RateX/Screenshot (33).png";
 import RJobMainDashboard from '../../assets/RJobs/mainDashboard.jpg'
+import RWoorldDashboard from '../../assets/RWorld/RWorldDashboard.png'
+import RWoorldDashboard2 from '../../assets/RWorld/RWorldDashboard2.png'
+import RWorldTaskScreen from '../../assets/RWorld/RWorldTaskScreen.png'
+import RWorldTaskScreen2 from '../../assets/RWorld/taskManagement2.png'
 import RJobPreview from '../../assets/RJobs/jobPreview.jpg'
 import RJobDashboard from '../../assets/RJobs/jobsDashboard.jpg'
 import RJobMockup from '../../assets/RJobs/RJobMockup.png'
+import confidentail from '../../assets/AdminPanel/confidential.webp'
 import { useEffect } from "react";
 import Header from "../header";
 import StackingCardMobile from "../StackingCardMobile";
@@ -69,10 +74,10 @@ const UniversalProject = ({ project,isDesktop }) => {
       tags: "0-to-1 Product Design | SaaS Platform | Web Design | App Design | Stakeholder Management",
       Images: {
         mockup: RatexMockup,
-        Image1: RatexMockup,
-        Image2: RateXDashboard,
-        Image3: RatexScreenshot,
-        Image4: RatexScreenshot2,
+        Image1: RWoorldDashboard,
+        Image2: RWoorldDashboard2,
+        Image3: RWorldTaskScreen,
+        Image4: RWorldTaskScreen2,
         Image5: RatexScreenshot3,
       },
       Description: {
@@ -112,8 +117,8 @@ const UniversalProject = ({ project,isDesktop }) => {
         Image1: RJobMainDashboard,
         Image2: RJobPreview,
         Image3: RJobDashboard,
-        Image4: RatexScreenshot2,
-        Image5: RatexScreenshot3,
+        Image4: RJobMockup,
+        Image5: RJobMockup,
       },
       Description: {
         descriptionTitle: "Job Portal for Hospitality",
@@ -149,11 +154,11 @@ const UniversalProject = ({ project,isDesktop }) => {
       tags: "0-to-1 Product Design | SaaS Platform | Web Design | App Design | Stakeholder Management",
       Images: {
         mockup: RatexMockup,
-        Image1: RatexMockup,
-        Image2: RateXDashboard,
-        Image3: RatexScreenshot,
-        Image4: RatexScreenshot2,
-        Image5: RatexScreenshot3,
+        Image1: confidentail,
+        Image2: confidentail,
+        Image3: confidentail,
+        Image4: confidentail,
+        Image5: confidentail,
       },
       Description: {
         descriptionTitle: "Secure platform for administration",
