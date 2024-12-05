@@ -33,15 +33,15 @@ const AppRouters = () => {
           
           {
             path: "/project/R-world",
-            element: <><ScrollToTop lenis={lenis} />  <UniversalProject project='RWorld'/></>,
+            element: <><ScrollToTop lenis={lenis} />  <UniversalProject isDesktop={isDesktop}  project='RWorld'/></>,
           },
           {
             path: "/project/R-Job",
-            element: <><ScrollToTop lenis={lenis} />  <UniversalProject project='RJob'/></>,
+            element: <><ScrollToTop lenis={lenis} />  <UniversalProject isDesktop={isDesktop}  project='RJob'/></>,
           },
           {
             path: "/project/Admin-panel",
-            element: <><ScrollToTop lenis={lenis} />  <UniversalProject project='Admin Panel'/></>,
+            element: <><ScrollToTop lenis={lenis} />  <UniversalProject isDesktop={isDesktop}  project='Admin Panel'/></>,
           },
       {
           path: "*", 
