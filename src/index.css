@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: "SharpGrotesk";
+    src: url("./assets/Font/SharpGrotesk-Medium20.otf");
+  }
+body{
+    width:100vw;
+    overflow-x: hidden;
+    /* background: #000; */
+}
+
