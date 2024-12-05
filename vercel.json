@@ -1,10 +1,6 @@
 {
     "rewrites": [
       {
-        "source": "/project/ratex",
-        "destination": "/project/ratex.html"
-      },
-      {
         "source": "/(.*)",
         "destination": "/index.html"
       }
