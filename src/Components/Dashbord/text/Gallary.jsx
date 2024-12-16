@@ -37,8 +37,6 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
     
     gsap.set(photos, { yPercent: 101 });
 
-    let mm = gsap.matchMedia(comp);
-   
       
 
       ScrollTrigger.create({
@@ -46,12 +44,13 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
         start: "top top",
         end: "bottom bottom",
         pin: ".right",
+        pinSpacing: false,
         scrub: true,
         onEnter:()=>{
-            setCurrentSection('Achievements')
+            setCurrentSection('Specialties')
         },
         onEnterBack:()=>{
-            setCurrentSection('Achievements')
+            setCurrentSection('Specialties')
           }
       });
       firstChild.forEach((detail, index) => {
