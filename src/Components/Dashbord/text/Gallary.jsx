@@ -6,9 +6,10 @@ import Gallary1 from '../../../assets/gallary/Gallary1.png'
 import Gallary2 from '../../../assets/gallary/Gallary2.png'
 import Gallary3 from '../../../assets/gallary/Gallary3.png'
 import Gallary4 from '../../../assets/gallary/gallary4.jpg'
+import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
-const   Gallery = ({setCurrentSection}) => {
+const   Gallery = ({setCurrentSection,isDesktop}) => {
   const comp = useRef(null);
   const galleryRef = useRef(null);
 
@@ -25,7 +26,9 @@ const   Gallery = ({setCurrentSection}) => {
     // color && gsap.to(galleryRef.current, { backgroundColor: color });
   };
 
-  useLayoutEffect(() => {
+  useGSAP(() => {
+
+    if(isDesktop){
     const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
     const firstChild = gsap.utils.toArray(".firstChild");
     const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
@@ -35,7 +38,7 @@ const   Gallery = ({setCurrentSection}) => {
     gsap.set(photos, { yPercent: 101 });
 
     let mm = gsap.matchMedia(comp);
-    mm.add("(min-width: 600px)", () => {
+   
       
 
       ScrollTrigger.create({
@@ -110,14 +113,7 @@ const   Gallery = ({setCurrentSection}) => {
         }
     });
 
-      return () => {
-        // console.log("mobile");
-      };
-    });
-
-    return () => {
-      mm.revert();
-    };
+}
   }, []);
 
   return (

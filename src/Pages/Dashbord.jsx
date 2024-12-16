@@ -42,7 +42,7 @@ const Dashbord = ({isDesktop,windowSize}) => {
       </Suspense>
 
       <Suspense fallback={<div>Loading Gallery...</div>}>
-        <Gallery setCurrentSection={setCurrentSection} />
+        <Gallery isDesktop={isDesktop}  setCurrentSection={setCurrentSection} />
       </Suspense>
 
       <div className="w-full h-[100vh]">
