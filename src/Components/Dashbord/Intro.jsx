@@ -16,65 +16,41 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 const Intro = () => {
-  useGSAP(() => {
-    var tl1 = gsap.timeline({
-      defaults: {
-        scrollTrigger: {
-          trigger: ".firstContainer",
-
-          scrub: 2,
-          pin: true,
-
-          // pinnedContainer: ".firstContainer",
-        },
-      },
-    });
-
-    tl1
-      .to(".leftSide", {
-        x: -200,
-        rotate: 45,
-        scrollTrigger: {
-          trigger: ".firstContainer",
-          start: "top top",
-          end: "+=100%", // Adjust the end value to overlap with the right element
-          scrub: 2,
-          // pin: true,
-
-          // pinnedContainer: ".firstContainer",
-        },
-      })
-      .to(
-        ".rightSide",
-        {
-          x: 170,
-          rotate: 45,
+    useGSAP(() => {
+        var tl1 = gsap.timeline({
           scrollTrigger: {
             trigger: ".firstContainer",
             start: "top top",
-            end: "center top",
+            end: "50% top", // Adjust the scroll length as needed
             scrub: 2,
-
             pin: true,
-            // pinnedContainer: ".firstContainer",
+            pinSpacing: true,
           },
-        },
-        "<"
-      )
-      .to(".topSide", {
-        y: -150,
-        rotate: 90,
-        scrollTrigger: {
-          trigger: ".firstContainer",
-          start: "top top",
-          end: "50% top",
-          scrub: 2,
-          pin: true,
-          pinnedContainer: ".firstContainer",
-        },
-      });
-  }, []);
-
+        });
+      
+        tl1
+          .to(".leftSide", {
+            x: -200,
+            rotate: 45,
+          })
+          .to(
+            ".rightSide",
+            {
+              x: 170,
+              rotate: 45,
+            },
+            "<" // Start at the same time as the previous animation
+          )
+          .to(
+            ".topSide",
+            {
+              y: -150,
+              rotate: 90,
+            },
+            "<" // Start at the same time as the previous animation
+          );
+      }, []);
+      
   return (
     <section className="firstContainer  bg-gradient-to-br from-gray-200 via-[#bcb8ad]  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
       <img
