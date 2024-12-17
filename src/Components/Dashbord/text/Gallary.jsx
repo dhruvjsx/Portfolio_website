@@ -44,8 +44,9 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
         start: "top top",
         end: "+=300%", 
         pin: ".right",
-        pinSpacing: false,
+        // pinSpacing: false,
         scrub: true,
+        markers:true,
         onEnter:()=>{
             setCurrentSection('Specialties')
         },
@@ -63,11 +64,11 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
 
         ScrollTrigger.create({
           trigger: headline,
-          start: "top 80%",
+          start: "top 50%",
           end: "top 30%",
         //   animation: animation,
           scrub: true,
-          markers: true,
+        //   markers: true,
        
           onEnter: () => changeGalleryBackground(allPhotos[index]),
           onLeave: () => resetGalleryBackground(allPhotos[index-1]),
