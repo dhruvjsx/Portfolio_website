@@ -1,4 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./example.css";
@@ -42,7 +42,7 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
       ScrollTrigger.create({
         trigger: galleryRef.current,
         start: "top top",
-        end: "bottom bottom",
+        end: "+=300%", 
         pin: ".right",
         pinSpacing: false,
         scrub: true,
@@ -67,6 +67,7 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
           end: "top 30%",
         //   animation: animation,
           scrub: true,
+          markers: true,
        
           onEnter: () => changeGalleryBackground(allPhotos[index]),
           onLeave: () => resetGalleryBackground(allPhotos[index-1]),
@@ -114,6 +115,22 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
 
 }
   }, []);
+  useGSAP(() => {
+    ScrollTrigger.refresh(); // Force recalculation after everything loads
+  }, [])
+  useEffect(() => {
+    const images = document.querySelectorAll("img");
+    const allImagesLoaded = Array.from(images).every(
+      (img) => img.complete && img.naturalHeight !== 0
+    );
+  
+    if (allImagesLoaded) {
+      ScrollTrigger.refresh();
+    } else {
+      window.addEventListener("load", () => ScrollTrigger.refresh());
+    }
+  }, []);
+  
 
   return (
     <div ref={comp}>
@@ -148,7 +165,7 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
           </div>
         </div>
 
-        <div className="right">
+        <div className="right relative overflow-visible">
           <div className="mobileContent">
             <div className="mobilePhoto red">
               <img src={Gallary1} className="object-fill h-full w-full " alt="Project " />
