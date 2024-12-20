@@ -46,7 +46,7 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
         pin: ".right",
         // pinSpacing: false,
         scrub: true,
-        markers:true,
+        // markers:true,
         onEnter:()=>{
             setCurrentSection('Specialties')
         },
