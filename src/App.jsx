@@ -6,6 +6,7 @@ import Loader from "./Components/Loader";
 import { useSmoothScroll } from "./Hooks/useSmoothScroll";
 import { useLayoutEffect } from "react";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/react';
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Loader />
       <AppRouters />
       <Analytics />
+      <SpeedInsights/>
       {/* </Router> */}
     </div>
   );
