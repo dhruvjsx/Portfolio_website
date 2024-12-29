@@ -5,7 +5,7 @@ import AppRouters from "./Routes";
 import Loader from "./Components/Loader";
 import { useSmoothScroll } from "./Hooks/useSmoothScroll";
 import { useLayoutEffect } from "react";
-
+import { Analytics } from "@vercel/analytics/react"
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
     <div className="relative App h-auto w-full bg-[#bcb8ad] ">
       <Loader />
       <AppRouters />
+      <Analytics />
       {/* </Router> */}
     </div>
   );
