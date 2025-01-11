@@ -16,7 +16,7 @@ import SaumitraSirRecommendation from "../../assets/Reviews/1719047805302.jpeg";
 import AmanSirRecommendation from "../../assets/Reviews/1622627971114.jpeg";
 gsap.registerPlugin(ScrollTrigger, Flip);
 
-const HorizontalScroll = () => {
+const HorizontalScroll = ({dynamicIsland}) => {
   const wheelRef = useRef(null);
   const headerRef = useRef(null);
   const [currentCard, setCurrentCard] = useState(null);
@@ -52,11 +52,11 @@ const HorizontalScroll = () => {
         // scrub: true,
         onEnter: () => {
           gsap.to(".arrow", { color: "white" });
-          gsap.to(".dynamic-island", { backgroundColor: "white", color:'black'});
+          gsap.to(dynamicIsland.current, { backgroundColor: "white", color:'black'});
         },
         onLeaveBack: () => {
           gsap.to(".arrow", { color: "black" });
-          gsap.to(".dynamic-island", { backgroundColor: "black", color:'white'});
+          gsap.to(dynamicIsland.current, { backgroundColor: "black", color:'white'});
         },
       },
     });
@@ -153,7 +153,7 @@ const HorizontalScroll = () => {
         },
       },
     });
-  }, []);
+  }, { scope: containerRef });
 
   const handleDownload = () => {
     const link = document.createElement("a");

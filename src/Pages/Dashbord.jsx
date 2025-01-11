@@ -26,7 +26,7 @@ const ContactMeMobile = lazy(() =>
 
 const Dashbord = ({isDesktop,windowSize}) => {
   const [currentSection, setCurrentSection] = useState();
- 
+  const dynamicIsland =useRef()
 
 
  
@@ -34,7 +34,7 @@ const Dashbord = ({isDesktop,windowSize}) => {
   return (
     <div ref={windowSize} className=" ">
       <Suspense fallback={<div>Loading Header...</div>}>
-        <Header currentSection={currentSection} />
+        <Header  dynamicIsland={dynamicIsland} currentSection={currentSection} />
       </Suspense>
 
       <Suspense fallback={<div>Loading Intro...</div>}>
@@ -65,11 +65,11 @@ const Dashbord = ({isDesktop,windowSize}) => {
 
       {isDesktop ? (
         <Suspense fallback={<div>Loading Horizontal Scroll...</div>}>
-          <HorizontalScroll />
+          <HorizontalScroll dynamicIsland={dynamicIsland} />
         </Suspense>
       ) : (
         <Suspense fallback={<div>Loading Horizontal Scroll...</div>}>
-        <ContactMeMobile setCurrentSection={setCurrentSection} isDesktop={isDesktop}/>
+        <ContactMeMobile  setCurrentSection={setCurrentSection} isDesktop={isDesktop}/>
         </Suspense>
       )}
     </div>

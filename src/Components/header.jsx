@@ -3,11 +3,12 @@ import { gsap } from "gsap";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Header = ({ currentSection, nodelay = false }) => {
+const Header = ({ currentSection, nodelay = false ,dynamicIsland}) => {
   const currentSectionTimeline = useRef(null);
   const previousSection = useRef(currentSection);
   const mm = useRef(gsap.matchMedia());
   const navigate = useNavigate();
+
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -120,8 +121,9 @@ const Header = ({ currentSection, nodelay = false }) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 h-[7vh] flex justify-center items-center px-3 py-1 pointer-events-none">
+    <div  className="fixed top-0 left-0 w-full z-50 h-[7vh] flex justify-center items-center px-3 py-1 pointer-events-none">
       <div
+      ref={dynamicIsland}
         className={`${
           nodelay ? "md:w-fit" : " md:w-[35%]"
         } w-[60%] flex items-center px-4 justify-evenly dynamic-island h-[90%] text-white bg-black rounded-2xl notch pointer-events-auto`}
