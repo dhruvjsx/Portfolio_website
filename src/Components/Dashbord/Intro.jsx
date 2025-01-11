@@ -10,21 +10,22 @@ import typeScriptBadge from "../../assets/TypeScriptBedge.png";
 import fullStackBadge from "../../assets/fullStackBade.png";
 import quote from "../../assets/quote.png";
 import { useGSAP } from "@gsap/react";
-import Header from "../header";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(useGSAP);
 
 const Intro = () => {
+  const introContainer = useRef()
     useGSAP(() => {
         var tl1 = gsap.timeline({
           scrollTrigger: {
-            trigger: ".firstContainer",
+            trigger: introContainer.current,
             start: "top top",
             end: "50% top", // Adjust the scroll length as needed
             scrub: 2,
             pin: true,
-            pinSpacing: true,
+            // pinSpacing: true,
           },
         });
       
@@ -49,10 +50,10 @@ const Intro = () => {
             },
             "<" // Start at the same time as the previous animation
           );
-      }, []);
+      },{ scope: introContainer });
       
   return (
-    <section className="firstContainer  bg-gradient-to-br from-gray-200 via-[#bcb8ad]  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
+    <section ref={introContainer} className="firstContainer  bg-gradient-to-br from-gray-200 via-[#bcb8ad]  w-[100vw] overflow-x-hidden h-screen relative overflow-hidden">
       <img
         src={quote}
         alt="quote"
