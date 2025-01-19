@@ -37,6 +37,7 @@ const HorizontalScroll = ({dynamicIsland}) => {
       scrollTrigger: {
         trigger: scroller,
         pin: true,
+        pinSpacing:true,
         scrub: 1,
         // snap: 1 / (sections.length - 1),
         end: () => `+=${horizontalScroll.offsetWidth}`,

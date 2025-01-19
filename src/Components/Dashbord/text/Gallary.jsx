@@ -44,7 +44,7 @@ const   Gallery = ({setCurrentSection,isDesktop}) => {
         start: "top top",
         end: "+=300%", 
         pin: ".right",
-        // pinSpacing: false,
+        pinSpacing: true,
         scrub: true,
         // markers:true,
         onEnter:()=>{

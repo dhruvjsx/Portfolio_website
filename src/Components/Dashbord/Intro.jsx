@@ -22,11 +22,11 @@ const Intro = () => {
           scrollTrigger: {
             trigger: introContainer.current,
             start: "top top",
-            end: "50% top", // Adjust the scroll length as needed
+            // end: "50% top", // Adjust the scroll length as needed
             scrub: 2,
             pin: true,
-            // pinSpacing: true,
-          },
+            pinSpacing: true,
+          }, 
         });
       
         tl1
